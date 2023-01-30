@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #141414;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,p {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+ol,
+ul {
+  li {
+    padding: 0;
+  }
+}
+
+ul {
+  li {
+    // путь к кастомной картинке пункта ul
+    // list-style-image: url('../img/ul.png');
+  }
+}
+
+//кастомные пункты списка с цифрами
+ol {
+  // list-style: none;
+  // @include counter(li);
+  li::before {
+    // color: $brand;
+  }
+}
+
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+//изменяем цвет выделения текста мышью
+::selection {
+  // background-color: $brand;
+  // color: $brand;
+  // text-shadow: none;
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  //свойство для исправления бага 100vh для мобильных
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height:         fill-available;
+  //свойство для плавной прокрутки на яблоках
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
