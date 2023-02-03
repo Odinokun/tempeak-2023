@@ -1,4 +1,69 @@
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+footer.footer
+  //BEGIN top
+  .footer__top
+    .container
+      .row
+        h3.h2.footer__title
+          |Need help?
+          a(href="tel:+380679999999")
+            span Contact us
+            img(src="assets/img/anim-gif/smartphone.gif" alt="Contact us")
+  //END   top
+
+  //BEGIN middle
+  .footer__middle
+    .container
+      .row
+        //BEGIN item
+        .col-12.col-md-6
+          a(href="/").footer__logo
+            img(src="assets/img/footer-logo.svg" alt="Tempeak")
+          .footer__schedule
+            span.h4 At Your Service
+            span.h4 24 Hours a Day, 7 Days a Week
+        //END   item
+        //BEGIN item
+        .col-6.col-md-3
+          ul.footer__menu
+            li.footer__menu-item
+              a(href="#").footer__menu-link.h4 About
+            li.footer__menu-item
+              a(href="#").footer__menu-link.h4 How it work
+            li.footer__menu-item
+              a(href="#").footer__menu-link.h4 Pricing
+            li.footer__menu-item
+              a(href="#").footer__menu-link.h4 Our sponsors
+            li.footer__menu-item
+              a(href="#").footer__menu-link.h4 Contact
+        //END   item
+        //BEGIN item
+        .col-6.col-md-3
+          .footer__apps
+            .footer__apps-title.tech-text-s Download the application:
+            .footer__apps-links
+              a(href="#").footer__apps-link
+                img(src="assets/img/app-store.svg" alt="App Store")
+              a(href="#").footer__apps-link
+                img(src="assets/img/google-play.svg" alt="Google Play")
+        //END   item
+  //END   middle
+
+  //BEGIN bottom
+  .footer__bottom
+    .container
+      .row
+        .col-6
+          .footer__bottom-copyright ©2022 Tempeak LLC. All rights reserved.
+        .col-4
+          a(href="#").footer__bottom-link Privacy Policy & Terms of Use Chicago New York
+        .col-2
+          .footer__socials
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__socials-link
+              +svg('fb')
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__socials-link
+              +svg('youtube')
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__socials-link
+              +svg('twitter')
+  //END   bottom
 //end footer

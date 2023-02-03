@@ -12,7 +12,7 @@ body {
 }
 
 html {
-  font-family: $font;
+  font-family: $inter;
   font-size: 16px;
   line-height: 1.38;
   color: #141414;
@@ -29,9 +29,14 @@ h2,
 h3,
 h4,
 h5,
-h6,p {
+h6,
+p {
   font-weight: 400;
   margin: 0 0 10px 0;
+}
+
+a {
+  transition: .5s;
 }
 
 ol,
@@ -76,9 +81,9 @@ svg {
 
 //изменяем цвет выделения текста мышью
 ::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
+  color: #000;
+  background-color: #ffbd06;
+  text-shadow: none;
 }
 
 .main-wrap {
@@ -101,7 +106,7 @@ svg {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 80px;
 }

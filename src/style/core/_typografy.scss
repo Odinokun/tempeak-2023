@@ -1,0 +1,110 @@
+.h1 {
+  font-family: $pp;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 115%;
+  letter-spacing: -.01em;
+  color: #000;
+
+  @include responsive-font(50, 34);
+}
+
+.h2 {
+  font-family: $pp;
+  font-size: 44px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 115%;
+  letter-spacing: -.01em;
+  color: #000;
+
+  @include responsive-font(44, 28);
+}
+
+.h3 {
+  font-family: $pp;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 120%;
+  color: #000;
+
+  @include responsive-font(24, 18);
+}
+
+.h4 {
+  font-family: $pp;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 120%;
+  color: #000;
+
+  @include responsive-font(18, 16);
+}
+
+.body-l {
+  font-family: $inter;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  color: #000;
+
+  @include responsive-font(18, 16);
+}
+
+.body-m {
+  font-family: $inter;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 110%;
+  color: #000;
+
+  @include responsive-font(16, 14);
+}
+
+.body-s {
+  font-family: $inter;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 110%;
+  color: #000;
+
+  @include responsive-font(14, 13);
+}
+
+.cta {
+  font-family: $inter;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 115%;
+  color: #000;
+}
+
+.tech-text-s {
+  font-family: $inter;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 110%;
+  color: #000;
+}
+
+.tech-text-link {
+  font-family: $inter;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 110%;
+  text-decoration: underline;
+  color: #000;
+}
+
+.tech-caps-text {
+  font-family: $inter;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #000;
+}
