@@ -93,7 +93,7 @@ svg {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height:         fill-available;
+  min-height: fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -108,5 +108,15 @@ svg {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 10px;
+
+  @include min(576) {
+    padding: 0 30px;
+  }
+  @include min(768) {
+    padding: 0 50px;
+  }
+  @include min(1200) {
+    padding: 0 80px;
+  }
 }
