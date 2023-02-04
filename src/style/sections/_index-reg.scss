@@ -1,0 +1,45 @@
+.index-reg {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url('../img/bg-index-reg.svg');
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include min(768) {
+    padding-top: 120px;
+    padding-bottom: 140px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.index-reg__title {
+  margin-bottom: 20px;
+}
+
+.index-reg__subtitle {
+  margin-bottom: 130px;
+
+  @include min(768) {
+    margin-bottom: 60px;
+  }
+}
+
+.index-reg__btn {
+  width: 100%;
+  max-width: 295px;
+  margin-bottom: 40px;
+}
