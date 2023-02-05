@@ -1,6 +1,7 @@
 $(function() {
 
   require('./modules/svg4everybody')();
+  require('./modules/swiper')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

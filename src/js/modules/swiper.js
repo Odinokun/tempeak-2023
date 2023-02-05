@@ -1,40 +1,66 @@
 module.exports = function () {
+  function TypeText() {
+    const text = document.querySelector('#index-personal__slider .swiper-slide-visible .index-personal__slider-title--visible')
+    const textValue = text.getAttribute('data-text');
 
-  // const clinicThumb = new Swiper("#clinic-slider-sm", {
-  //   slidesPerView: 1,
-  //   spaceBetween: 20,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   loop: true,
-  //   watchSlidesProgress: true,
-  //   breakpoints: {
-  //     576: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20,
-  //     },
-  //     992: {
-  //       centeredSlides: true,
-  //       slidesPerView: 3,
-  //       spaceBetween: 20,
-  //     },
-  //   },
-  // });
-  //
-  // const clinicMain = new Swiper("#clinic-slider-lg", {
-  //   thumbs: {
-  //     swiper: clinicThumb,
-  //   },
-  //   effect: "fade",
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   loop: true,
-  //   watchSlidesProgress: true,
-  // });
-  //
+    const options = {
+      strings: [textValue],
+      typeSpeed: 40,
+      startDelay: 500,
+      onComplete: (self) => {
+        const descr = document.querySelector('#index-personal__slider .swiper-slide-visible .index-personal__descr')
+        descr.classList.add('active')
+      },
+    };
+    const typed = new Typed('#index-personal__slider .swiper-slide-visible .index-personal__slider-title--visible span', options);
+  }
+
+  function TypeTextCleaner() {
+    const textBlockPrev = document.querySelector('#index-personal__slider .swiper-slide-prev .index-personal__slider-title--visible span')
+    const textBlockNext = document.querySelector('#index-personal__slider .swiper-slide-next .index-personal__slider-title--visible span')
+    if (textBlockPrev) {
+      textBlockPrev.innerHTML = '';
+    }
+    if (textBlockNext) {
+      textBlockNext.innerHTML = '';
+    }
+    const textBlockPrevCursor = document.querySelector('#index-personal__slider .swiper-slide-prev .typed-cursor')
+    const textBlockNextCursor = document.querySelector('#index-personal__slider .swiper-slide-next .typed-cursor')
+    if (textBlockPrevCursor) {
+      textBlockPrevCursor.remove();
+    }
+    if (textBlockNextCursor) {
+      textBlockNextCursor.remove();
+    }
+    const descr = document.querySelector('#index-personal__slider .swiper-slide-visible .index-personal__descr')
+    descr.classList.remove('active')
+  }
+
+  const indexPersonalThumb = new Swiper("#index-personal__slider-thumb", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+  });
+
+  const indexPersonal = new Swiper("#index-personal__slider", {
+    thumbs: {
+      swiper: indexPersonalThumb,
+    },
+    effect: "fade",
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    watchSlidesProgress: true,
+    on: {
+      slideChange: function () {
+        TypeTextCleaner();
+        TypeText();
+      }
+    },
+  });
+
+
   // const whyWeSlider = new Swiper('#why-we-slider', {
   //   spaceBetween: 20,
   //   grabCursor: false,
