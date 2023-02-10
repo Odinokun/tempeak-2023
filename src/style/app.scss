@@ -8,14 +8,18 @@
 @import 'core/btns';
 
 //elements
-//@import 'elements/burger';
+@import 'elements/logo';
+@import 'elements/menu';
+@import 'elements/logins';
+@import 'elements/header__right-mob';
+@import 'elements/burger';
 //@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 
 //section
-//@import 'sections/header';
+@import 'sections/header';
 @import 'sections/footer';
 @import 'sections/index-reg';
 @import 'sections/index-apps';

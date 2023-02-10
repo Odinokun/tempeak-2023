@@ -16,9 +16,17 @@
   white-space: nowrap;
   text-decoration: none;
   color: #242424;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 12px !important;
   box-shadow: none;
+}
+
+.btn--transparent {
+  border: 2px solid transparent;
+
+  &:hover {
+    color: #ffd04e;
+  }
 }
 
 .btn--white {
@@ -29,3 +37,44 @@
     border-color: #242424;
   }
 }
+
+.btn--highlight {
+  border: 2px solid #ffd04e;
+  background-color: #ffd04e;
+
+  &:hover {
+    border-color: #242424;
+  }
+}
+
+/* begin GRADIENT */
+.btn--gradient {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-image: linear-gradient(90deg, #ffd04e -8.24%, #ffe59e 107.45%);
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  span {
+    position: relative;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+    background-color: #ffbd06;
+  }
+}
+/* end   GRADIENT */

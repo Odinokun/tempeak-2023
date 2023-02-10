@@ -47,11 +47,12 @@
 
 // ===== responsive font =====
 @mixin responsive-font($pcSize, $mobSize) {
-  $maxWidth: 1400; //контейнер
+  font-size: $pcSize + px; //размер на десктопе
+
+  $maxWidth: 1320; //контейнер
   $addSize: $pcSize - $mobSize; //разница в размере
   $maxWidth: $maxWidth - 320; //разница в контейнерах
-  font-size: $pcSize + px; //размер на десктопе
-  @media (max-width: 1400px) {
+  @media (max-width: 1320px) {
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
   }
 }
