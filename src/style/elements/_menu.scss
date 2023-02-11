@@ -1,34 +1,35 @@
 .menu {
-  width: auto;
   display: flex;
   flex-direction: column;
-  padding: 0;
   align-items: flex-start;
+  width: auto;
+  padding: 0;
+
   @include min(1200) {
-  align-items: center;
-  flex-direction: row;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
 .menu__list {
   display: flex;
-  padding: 0;
-  list-style: none;
   flex-direction: column;
   margin: 0 0 24px 0;
-  @include min(1200) {
-  margin: 0;
-      flex-direction: row;
+  padding: 0;
+  list-style: none;
 
+  @include min(1200) {
+    flex-direction: row;
+    margin: 0;
   }
 }
 
 .menu__item {
   margin-bottom: 12px;
-  @include min(1200) {
-  margin-bottom: 0px;
-  padding: 0 13px;
 
+  @include min(1200) {
+    margin-bottom: 0;
+    padding: 0 13px;
   }
 }
 
@@ -36,6 +37,7 @@
   transition: .5s;
   text-decoration: none;
   color: #6b6b6b;
+
   @include responsive-font(32, 24);
   @include min(1200) {
     font-size: 14px;
@@ -50,9 +52,9 @@
   position: relative;
   display: flex;
   text-decoration: none;
-  @include min(1200) {
-  margin-left: 15px;
 
+  @include min(1200) {
+    margin-left: 15px;
   }
 
   &:hover {

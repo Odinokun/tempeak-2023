@@ -1,23 +1,23 @@
 .logins {
   display: flex;
+  flex-direction: column;
   width: auto;
   margin-top: auto;
   padding: 0;
-  flex-direction: column;
 
   @include min(1200) {
-    margin: 0;
     flex-direction: row;
+    margin: 0;
   }
 
   .btn {
     height: 40px;
     margin-top: 24px;
     padding: 5px 16px;
-    @include min(1200) {
-    margin-left: 15px;
-      margin-top: 0;
 
+    @include min(1200) {
+      margin-top: 0;
+      margin-left: 15px;
     }
   }
 }

@@ -5,7 +5,7 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'inner'
-    ]);
+  ]);
 });
 
 function pageWidget(pages) {

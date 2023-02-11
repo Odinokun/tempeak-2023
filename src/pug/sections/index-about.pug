@@ -2,9 +2,17 @@
 .index-about
   .container
     .row
-      h2.h2.index-about__title Do you need to help your practice run smoothly, eliminating unwanted downtime? Unlike traditional staffing, we regularly fill dentistry jobs for dental practices - whether permanent, temporary, or emergency.        Find your quality dental staffing with Tempeak.
+      h2.h2.index-about__title
+        | Do you need to help your practice run smoothly, eliminating unwanted downtime? Unlike traditional staffing, we regularly fill dentistry jobs for dental practices - whether permanent, temporary, or emergency.
+        a(href="#")
+          img(src="assets/img/anim-gif/search.gif" alt="search")
+        | Find your quality dental staffing with Tempeak.
       .index-about__video
         .index-about__video-imac
-          img(src="assets/img/imac.svg" alt="Tempeak")
-
+          a.index-about__video-bg(href='https://youtu.be/XsLuwX22M9g')
+            picture
+              source(srcset='https://i.ytimg.com/vi_webp/XsLuwX22M9g/maxresdefault.webp' type='image/webp')
+              img.index-about__video-media(src='https://i.ytimg.com/vi/XsLuwX22M9g/maxresdefault.jpg' alt='Tempeak')
+          button.index-about__video-btn
+            +svg('play')
 //END   index-about

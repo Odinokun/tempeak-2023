@@ -2,6 +2,8 @@ $(function() {
 
   require('./modules/svg4everybody')();
   require('./modules/swiper')();
+  require('./modules/menu')();
+  require('./modules/playYT')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();
