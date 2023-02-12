@@ -1,0 +1,46 @@
+mixin slide(logo)
+  .swiper-slide.jobs-slider__slide
+    //BEGIN header
+    .jobs-slider__header
+      .jobs-slider__header-logo
+        img(src="assets/img/brands-logo/" + logo + ".svg" alt="logo")
+      .jobs-slider__header-label.jobs-slider__header-label--new
+        span new
+    //END   header
+    h4.jobs-slider__title.h4 Baltimore Dental Group
+    .jobs-slider__rating
+      .jobs-slider__rating-icon
+        +svg('star')
+      .jobs-slider__rating-num 4.75
+      a(href="#").jobs-slider__rating-link (48)
+
+    //BEGIN info
+    .jobs-slider__info
+      .jobs-slider__info-item
+        span.tech-text-s Specialty:
+        span.body-m DDS, DMD
+      .jobs-slider__info-item
+        span.tech-text-s Address:
+        span.body-m Baltimore, MD 21203
+    //END   info
+
+    //BEGIN footer
+    .jobs-slider__footer
+      a(href="#").double-btn
+        span.cta More details
+      .jobs-slider__footer-date
+        .jobs-slider__footer-date-icon
+          +svg('clock')
+        .jobs-slider__footer-date-text.body-s 8 hours ago
+    //END   footer
+
+
+
+//BEGIN jobs-slider
+.jobs-slider#jobs-slider
+  .swiper-wrapper
+    +slide('01')
+    +slide('02')
+    +slide('03')
+    +slide('04')
+//END   jobs-slider

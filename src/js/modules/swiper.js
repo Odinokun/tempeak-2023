@@ -60,6 +60,30 @@ module.exports = function () {
     },
   });
 
+  const jobsSlider = new Swiper('#jobs-slider', {
+    loop: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    slidesPerView: 1.1,
+    centeredSlides: false,
+    autoplay: {
+      delay: 3000,
+      pauseOnMouseEnter: true,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1.2,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      992: {
+        slidesPerView: 4,
+      }
+    }
+  });
+
 
   // const whyWeSlider = new Swiper('#why-we-slider', {
   //   spaceBetween: 20,

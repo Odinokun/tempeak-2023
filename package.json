@@ -54,6 +54,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.4.1",
     "normalize.css": "^7.0.0",
+    "simplebar": "^6.2.1",
     "svg4everybody": "^2.1.9",
     "swiper": "^8.4.5"
   }

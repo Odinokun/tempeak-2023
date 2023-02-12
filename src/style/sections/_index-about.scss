@@ -10,16 +10,36 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin: 0 13px;
-    border-radius: 12px;
+    border-radius: 8px;
     background: linear-gradient(90deg, #ffd04e -8.24%, #ffe59e 107.45%);
+
+    @include min(576) {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+    @include min(992) {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+    }
 
     img {
       display: block;
-      width: 30px;
-      height: 30px;
+      width: 15px;
+      height: 15px;
+
+      @include min(576) {
+        width: 20px;
+        height: 20px;
+      }
+      @include min(992) {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }

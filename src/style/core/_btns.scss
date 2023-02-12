@@ -77,4 +77,45 @@
     background-color: #ffbd06;
   }
 }
+
 /* end   GRADIENT */
+
+
+/* begin DOUBLE COLOR BTN */
+
+.double-btn {
+  position: relative;
+  display: inline-flex;
+  text-decoration: none;
+
+  &:hover {
+    span {
+      background-color: #fff6de;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 6px 10px;
+    transition: .5s;
+    border: 2px solid #3d3d3d;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+    display: block;
+    width: calc(100% - 4px);
+    height: 100%;
+    content: '';
+    border-radius: 8px;
+    background: #ffe59e;
+  }
+}
+
+/* end   DOUBLE COLOR BTN */

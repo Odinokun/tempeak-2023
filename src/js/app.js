@@ -4,6 +4,8 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/menu')();
   require('./modules/playYT')();
+  require('./modules/ui')();
+  require('./modules/customScrollBar')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

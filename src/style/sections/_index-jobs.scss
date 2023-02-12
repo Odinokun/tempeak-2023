@@ -1,0 +1,26 @@
+.index-jobs__header {
+  padding-bottom: 13px;
+
+  @include min(768) {
+    padding-bottom: 40px;
+  }
+}
+
+.index-jobs__header-title {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.index-jobs__city-filter {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  @include min(768) {
+    justify-content: flex-end;
+  }
+}
+
+.index-jobs__city-filter-select {
+  max-width: calc(100% - 50px);
+}

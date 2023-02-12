@@ -8,7 +8,6 @@ module.exports = function () {
         setupVideo(videos[i]);
       }
     }
-
   }
 
   function setupVideo(video) {
