@@ -1,40 +1,45 @@
 mixin slide(logo)
   .swiper-slide.jobs-slider__slide
-    //BEGIN header
-    .jobs-slider__header
-      .jobs-slider__header-logo
-        img(src="assets/img/brands-logo/" + logo + ".svg" alt="logo")
-      .jobs-slider__header-label.jobs-slider__header-label--new
-        span new
-    //END   header
-    h4.jobs-slider__title.h4 Baltimore Dental Group
-    .jobs-slider__rating
-      .jobs-slider__rating-icon
-        +svg('star')
-      .jobs-slider__rating-num 4.75
-      a(href="#").jobs-slider__rating-link (48)
+    //BEGIN clinic-card
+    .clinic-card
+      //BEGIN clinic-card__header
+      .clinic-card__header
+        .clinic-card__logo
+          img(src="assets/img/brands-logo/" + logo + ".svg" alt="logo")
+        .clinic-card__header-label.clinic-card__header-label--new
+          span new
+      //END   clinic-card__header
 
-    //BEGIN info
-    .jobs-slider__info
-      .jobs-slider__info-item
-        span.tech-text-s Specialty:
-        span.body-m DDS, DMD
-      .jobs-slider__info-item
-        span.tech-text-s Address:
-        span.body-m Baltimore, MD 21203
-    //END   info
+      h4.clinic-card__title.h4 Baltimore Dental Group
 
-    //BEGIN footer
-    .jobs-slider__footer
-      a(href="#").double-btn
-        span.cta More details
-      .jobs-slider__footer-date
-        .jobs-slider__footer-date-icon
-          +svg('clock')
-        .jobs-slider__footer-date-text.body-s 8 hours ago
-    //END   footer
+      //BEGIN rating
+      .clinic-card__rating
+        .clinic-card__rating-icon
+          +svg('star')
+        .clinic-card__rating-num 4.75
+        a(href="#").clinic-card__rating-link (48)
+      //END   rating
 
+      //BEGIN clinic-card__info
+      .clinic-card__info
+        .clinic-card__info-item
+          span.tech-text-s Specialty:
+          span.body-m DDS, DMD
+        .clinic-card__info-item
+          span.tech-text-s Address:
+          span.body-m Baltimore, MD 21203
+      //END   clinic-card__info
 
+      //BEGIN clinic-card__footer
+      .clinic-card__footer
+        a(href="#").double-btn
+          span.cta More details
+        .clinic-card__footer-date
+          .clinic-card__footer-date-icon
+            +svg('clock')
+          .clinic-card__footer-date-text.body-s 20 hours ago
+      //END   clinic-card__footer
+    //END   clinic-card
 
 //BEGIN jobs-slider
 .jobs-slider#jobs-slider
@@ -43,4 +48,12 @@ mixin slide(logo)
     +slide('02')
     +slide('03')
     +slide('04')
+    +slide('01')
+    +slide('02')
+    +slide('03')
+    +slide('04')
+  .swiper-button-prev
+    +svg('slider-arr')
+  .swiper-button-next
+    +svg('slider-arr')
 //END   jobs-slider

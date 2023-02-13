@@ -1,4 +1,66 @@
-.jobs-slider{
-  overflow: hidden;
-  padding-bottom: 400px;
+.jobs-slider {
+  position: relative;
+  padding: 0;
+
+  @include min(992) {
+    overflow: hidden;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: calc(100% + 20px);
+    left: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    user-select: none;
+    border: 2px solid #ffbd06;
+    border-radius: 50%;
+
+    @include min(992) {
+      top: calc(100% + 30px);
+      left: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      fill: #ffbd06;
+      width: 7px;
+      height: 12px;
+      user-select: none;
+    }
+  }
+
+  .swiper-button-disabled {
+    pointer-events: none;
+    opacity: 1;
+    border-color: #e9e9e9;
+
+    svg {
+      fill: #e9e9e9;
+    }
+  }
+
+  .swiper-button-prev {
+    @include min(992) {
+      transform: translateX(-65px);
+    }
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper-button-next {
+    transform: translateX(60px);
+
+    @include min(992) {
+      transform: translateX(5px);
+    }
+  }
 }

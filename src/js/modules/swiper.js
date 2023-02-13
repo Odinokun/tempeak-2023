@@ -61,24 +61,35 @@ module.exports = function () {
   });
 
   const jobsSlider = new Swiper('#jobs-slider', {
-    loop: true,
-    spaceBetween: 20,
+    loop: false,
     grabCursor: true,
+    spaceBetween: 10,
     slidesPerView: 1.1,
     centeredSlides: false,
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-      disableOnInteraction: false,
+    // autoplay: {
+    //   delay: 3000,
+    //   pauseOnMouseEnter: true,
+    //   disableOnInteraction: false,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      576: {
+      375: {
         slidesPerView: 1.2,
       },
+      576: {
+        spaceBetween: 20,
+        slidesPerView: 1.5,
+      },
       768: {
-        slidesPerView: 2.2,
+        slidesPerView: 2.3,
       },
       992: {
+        slidesPerView: 3,
+      },
+      1200: {
         slidesPerView: 4,
       }
     }
