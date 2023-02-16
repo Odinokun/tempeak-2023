@@ -19,6 +19,16 @@
   border: 2px solid transparent;
   border-radius: 12px !important;
   box-shadow: none;
+
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+  }
 }
 
 .btn--transparent {

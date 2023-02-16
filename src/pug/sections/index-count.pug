@@ -1,0 +1,45 @@
+//BEGIN index-count
+.index-count
+  .container
+    .row
+      .col-6.col-xl-3
+        //BEGIN item
+        .index-count__item.index-count__item--01
+          .index-count__icon
+            +svg('diagram')
+          .index-count__title
+            .index-count__title-count.countTo(data-from="0" data-to="1.2" data-decimals='1' data-speed="2000" data-refresh-interval="10")
+            .index-count__title-text M
+          .index-count__subtitle.cta active users
+        //END   item
+      .col-6.col-xl-3
+        //BEGIN item
+        .index-count__item.index-count__item--02
+          .index-count__icon
+            +svg('dentist-chair')
+          .index-count__title
+            .index-count__title-count.countTo(data-from="0" data-to="103.2" data-decimals='1' data-speed="2000" data-refresh-interval="10")
+            .index-count__title-text k
+          .index-count__subtitle.cta dental offices
+        //END   item
+      .col-6.col-xl-3
+        //BEGIN item
+        .index-count__item.index-count__item--03
+          .index-count__icon
+            +svg('user')
+          .index-count__title
+            .index-count__title-count.countTo(data-from="0" data-to="307.6" data-decimals='1' data-speed="2000" data-refresh-interval="10")
+            .index-count__title-text k
+          .index-count__subtitle.cta dental professionals
+        //END   item
+      .col-6.col-xl-3
+        //BEGIN item
+        .index-count__item.index-count__item--04
+          .index-count__icon
+            +svg('handshake')
+          .index-count__title
+            .index-count__title-count.countTo(data-from="0" data-to="74.4" data-decimals='1' data-speed="2000" data-refresh-interval="10")
+            .index-count__title-text k
+          .index-count__subtitle.cta deals only in 2022
+        //END   item
+//END   index-count

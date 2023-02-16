@@ -6,6 +6,7 @@ module.exports = [
   './node_modules/swiper/swiper-bundle.js',
   './src/vendors/jquery-ui/jquery-ui.min.js',
   './node_modules/simplebar/dist/simplebar.js',
+  './src/vendors/counterTo.js',
 
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
   // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',

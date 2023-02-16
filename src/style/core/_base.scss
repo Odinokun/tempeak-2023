@@ -98,7 +98,7 @@ svg {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height:         fill-available;
+  min-height: fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -125,4 +125,20 @@ svg {
   .row {
     margin: 0;
   }
+}
+
+
+.reviews__counter-number {
+  font-size: 100px;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  opacity: .7;
+  color: tomato;
+  background-color: #ccc;
 }

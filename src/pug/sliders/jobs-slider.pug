@@ -1,4 +1,4 @@
-mixin slide(logo)
+mixin slide(logo, title)
   .swiper-slide.jobs-slider__slide
     //BEGIN clinic-card
     .clinic-card
@@ -10,7 +10,7 @@ mixin slide(logo)
           span new
       //END   clinic-card__header
 
-      h4.clinic-card__title.h4 Baltimore Dental Group
+      h4.clinic-card__title.h4 #{title}
 
       //BEGIN rating
       .clinic-card__rating
@@ -37,21 +37,21 @@ mixin slide(logo)
         .clinic-card__footer-date
           .clinic-card__footer-date-icon
             +svg('clock')
-          .clinic-card__footer-date-text.body-s 20 hours ago
+          .clinic-card__footer-date-text.body-s 10 hours ago
       //END   clinic-card__footer
     //END   clinic-card
 
 //BEGIN jobs-slider
 .jobs-slider#jobs-slider
   .swiper-wrapper
-    +slide('01')
-    +slide('02')
-    +slide('03')
-    +slide('04')
-    +slide('01')
-    +slide('02')
-    +slide('03')
-    +slide('04')
+    +slide('01', 'Baltimore Dental Group')
+    +slide('02', 'Moderna Dental')
+    +slide('03', 'Dental Wellness of Clifton')
+    +slide('04', 'Dental W12')
+    +slide('01', 'Baltimore Dental Group')
+    +slide('02', 'Moderna Dental')
+    +slide('03', 'Dental Wellness of Clifton')
+    +slide('04', 'Dental W12')
   .swiper-button-prev
     +svg('slider-arr')
   .swiper-button-next

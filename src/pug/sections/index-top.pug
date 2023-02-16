@@ -1,0 +1,66 @@
+mixin ava(img, className)
+  div(class="index-top__ava index-top__ava--" + className)
+    img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
+
+//BEGIN index-top
+.index-top
+  .container
+    .row
+      h1.index-top__title.h1 Professional temp staff for dental practices in USA
+      .index-top__subtitle.body-l Unlike traditional staffing agencies, we connect you directly with dental professionals
+
+      //BEGIN search
+      form.index-top__search
+        .index-top__search-select
+          select.select.select--transparent
+            option(value="State") State
+            option(value="Alabama") Alabama
+            option(value="Nebraska") Nebraska
+            option(value="Virginia") Virginia
+            option(value="New Hampshire") New Hampshire
+            option(value="Massachusetts") Massachusetts
+            option(value="Rhode Island") Rhode Island
+            option(value="Connecticut") Connecticut
+            option(value="New York") New York
+            option(value="New Jersey") New Jersey
+            option(value="Pennsylvania") Pennsylvania
+            option(value="Delaware") Delaware
+            option(value="Maryland") Maryland
+            option(value="North Carolina") North Carolina
+            option(value="South Carolina") South Carolina
+            option(value="Utah") Utah
+        .index-top__search-select
+          select.select.select--transparent
+            option Specialty
+            option Specialty 1
+            option Specialty 2
+            option Specialty 3
+            option Specialty 4
+            option Specialty 5
+            option Specialty 6
+            option Specialty 7
+            option Specialty 8
+            option Specialty 9
+            option Specialty 10
+        button.index-top__search-btn.btn.btn--gradient
+          span Search
+          img(src="assets/img/anim-gif/search.gif" alt="search button")
+      //END   search
+
+      //BEGIN index-top__rounds
+      .index-top__rounds
+        .index-top__rounds-img
+          img(src="assets/img/rounds.svg" alt="Tempeak")
+        .index-top__rounds-avatars
+          +ava('01', 'lg')
+          +ava('02', 'sm')
+          +ava('03', 'lg')
+          +ava('04', 'sm')
+          +ava('01', 'lg')
+          +ava('02', 'sm')
+          +ava('03', 'lg')
+          +ava('04', 'sm')
+          +ava('04', 'sm')
+        .index-top__rounds-text.body-s Over 100,000 dental practices <br>and 132,200 dental professionals <br>waiting for you
+      //END   index-top__rounds
+//END   index-top

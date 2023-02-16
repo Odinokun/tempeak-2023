@@ -77,6 +77,7 @@ module.exports = function () {
     },
     breakpoints: {
       375: {
+        spaceBetween: 10,
         slidesPerView: 1.2,
       },
       576: {
@@ -84,12 +85,15 @@ module.exports = function () {
         slidesPerView: 1.5,
       },
       768: {
+        spaceBetween: 20,
         slidesPerView: 2.3,
       },
       992: {
+        spaceBetween: 20,
         slidesPerView: 3,
       },
       1200: {
+        spaceBetween: 20,
         slidesPerView: 4,
       }
     }

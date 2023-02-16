@@ -6,6 +6,7 @@ $(function() {
   require('./modules/playYT')();
   require('./modules/ui')();
   require('./modules/customScrollBar')();
+  require('./modules/countTo')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();
