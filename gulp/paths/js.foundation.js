@@ -7,6 +7,7 @@ module.exports = [
   './src/vendors/jquery-ui/jquery-ui.min.js',
   './node_modules/simplebar/dist/simplebar.js',
   './src/vendors/counterTo.js',
+  './node_modules/jquery.marquee/jquery.marquee.js',
 
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
   // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',

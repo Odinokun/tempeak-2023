@@ -1,4 +1,10 @@
 @font-face {
+  font-family: PPMori-Regular;
+  src:  url('../fonts/PPMori-Regular.woff2') format('woff2'),
+        url('../fonts/PPMori-Regular.woff')  format('woff');
+}
+
+@font-face {
   font-family: PPMori-SemiBold;
   src:  url('../fonts/PPMori-SemiBold.woff2') format('woff2'),
         url('../fonts/PPMori-SemiBold.woff')  format('woff');

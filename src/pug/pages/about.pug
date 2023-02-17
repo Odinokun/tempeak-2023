@@ -1,0 +1,91 @@
+extends ../_template
+
+block variables
+  - let title       = '01.2 about / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin ava(img, className)
+  div(class="about-circle__ava about-circle__ava--" + className)
+    img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN about-top
+      .about-top.top-section
+        .container
+          .row
+            h1.h1.about-top__title Find Staff For Your Dental Office Today!
+      //END   about-top
+
+      include ../sections/about-circle
+
+      //BEGIN about-run-text
+      .about-run-text
+        .about-run-text__left
+          include ../elements/marquee
+        .about-run-text__right
+          include ../elements/marquee
+      //END   about-run-text
+
+      include ../sections/about-estimate
+      include ../sections/about-we-do
+
+      //BEGIN about-find-text
+      .about-find-text
+        .container
+          .row
+            include ../elements/text-about
+      //END   about-find-text
+
+      //BEGIN about-bottom
+      .about-bottom
+        .container
+          .row
+            .col-12.col-lg-6
+              .about-bottom__item
+                .about-bottom__item-icon
+                  img(src="assets/img/anim-gif/star.gif" alt="Tempeak")
+                .h3.about-bottom__item-title Mission statement
+                .about-bottom__item-text
+                  p We provide only the best professionals and experts in every field of dentistry, offering secure, reliable, and cost-effective services to improve your office workflow and create a positive culture in your office.
+                  p Tempeak operates using only the best method’s of modern dental practice dynamics. We work endlessly to match only the best candidates with your business. We use a personal and professional approach on both sides of our business model. Our commitment is to you.
+                  p Whether you are seeking to temp a contractor or hire new staff member(s), our team will continuously monitor the needs of your dental business to meet your needs in no time.
+                a(href="#").btn.btn--highlight.about-bottom__item-btn
+                  span Find a job
+
+            .col-12.col-lg-6
+              .about-bottom__item
+                .about-bottom__item-icon
+                  img(src="assets/img/anim-gif/folder.gif" alt="Tempeak")
+                .h3.about-bottom__item-title Your placement specialist
+                .about-bottom__item-text
+                  p Being a trustworthy placement company, we provide you with access to thousands of available licensed dentist professionals who uphold a high level of professionalism and excellence in their field.
+                  p At tempeak, our goal is to match an employer with qualified candidates on a temporary or permanent basis so that you, the dental office, doesn’t have to sacrifice production levels because your staffing demand isn’t met. Let us solve that for you!
+                  p Tempeak dental placement company is working hard every day to meet your demand and exceed your expectations.
+                a(href="#").btn.btn--highlight.about-bottom__item-btn
+                  span Find a staff
+      //END   about-bottom
+
+    //end content
+    include ../sections/footer
+    include ../sections/scripts

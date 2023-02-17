@@ -33,8 +33,12 @@
 @import 'sections/index-top';
 @import 'sections/index-count';
 
+@import 'sections/about-circle';
+@import 'sections/about-estimate';
+@import 'sections/about-we-do';
+
 //sliders
 @import "sliders/jobs-slider";
 
 //pages
-//@import 'pages/index';
+@import 'pages/about';

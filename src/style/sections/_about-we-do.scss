@@ -1,0 +1,42 @@
+.about-we-do {
+  padding-top: 50px;
+  padding-bottom: 105px;
+  background-image: url('../img/bg-about-we-do.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include min(992) {
+    padding-top: 85px;
+    padding-bottom: 160px;
+  }
+}
+
+.about-we-do__bredcrumbs {
+  margin-bottom: 170px;
+  color: #fff;
+
+  @include min(992) {
+    margin-bottom: 230px;
+  }
+}
+
+.about-we-do__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-we-do__text-title {
+  max-width: 500px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.about-we-do__text-subtitle {
+  max-width: 610px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}

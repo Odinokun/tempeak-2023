@@ -7,6 +7,7 @@ $(function() {
   require('./modules/ui')();
   require('./modules/customScrollBar')();
   require('./modules/countTo')();
+  require('./modules/marquee')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

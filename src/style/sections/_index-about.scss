@@ -11,42 +11,49 @@
 .index-about__title {
   margin-bottom: 60px;
   text-align: center;
+}
 
-  a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    margin: 0 13px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #ffd04e -8.24%, #ffe59e 107.45%);
+.index-about__title-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin: 0 13px;
+  transition: .5s;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ffd04e -8.24%, #ffe59e 107.45%);
+  padding: 0 7px;
+
+  @include min(576) {
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  @include min(992) {
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 12px;
+  }
+
+  img {
+    display: block;
+    width: 15px;
+    height: 15px;
 
     @include min(576) {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 20px;
+      height: 20px;
     }
     @include min(992) {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
+      width: 30px;
+      height: 30px;
     }
+  }
 
-    img {
-      display: block;
-      width: 15px;
-      height: 15px;
-
-      @include min(576) {
-        width: 20px;
-        height: 20px;
-      }
-      @include min(992) {
-        width: 30px;
-        height: 30px;
-      }
-    }
+  .cta {
+    padding-left: 10px;
+    white-space: nowrap;
   }
 }
 
