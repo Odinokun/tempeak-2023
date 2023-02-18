@@ -1,0 +1,106 @@
+.pricing-top {
+  padding-bottom: 30px;
+  text-align: center;
+
+  @include min(768) {
+    padding-bottom: 65px;
+  }
+}
+
+.pricing-cards {
+  padding-bottom: 60px;
+
+  @include min(768) {
+    padding-bottom: 120px;
+  }
+  @include min(992) {
+    padding-bottom: 200px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include min(992) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  min-height: 300px;
+  margin-bottom: 10px;
+  padding: 0;
+  border-radius: 20px;
+
+  @include min(992) {
+    width: calc(50% - 10px);
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.pricing-card__label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+
+  @include min(576) {
+    top: 40px;
+    left: 40px;
+  }
+
+  svg {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+  }
+
+  span {
+    display: block;
+    margin: 0;
+  }
+}
+
+.pricing-card__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pricing-card__title {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.pricing-card__subtitle {
+  text-align: center;
+}
+
+.pricing-card__btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}

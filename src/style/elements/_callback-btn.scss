@@ -1,0 +1,57 @@
+.callback-btn {
+  position: fixed;
+  z-index: 10;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
+
+  @include min(576) {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  &.scroll {
+    .btn {
+      span {
+        width: 0;
+        transform: scale(0) translateX(100%);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.active {
+    .btn {
+      &::after {
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 12px;
+        height: 12px;
+        content: '';
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: #ffbd06;
+      }
+    }
+  }
+
+  .btn {
+    overflow: visible;
+    padding: 5px 20px;
+
+    svg {
+      margin: 0;
+    }
+
+    span {
+      overflow: hidden;
+      width: 80px;
+      transition: .5s;
+      transform: scale(1) translateX(0);
+      text-align: right;
+      opacity: 1;
+    }
+  }
+}

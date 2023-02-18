@@ -1,0 +1,67 @@
+extends ../_template
+
+block variables
+  - let title       = '01.4 Pricing / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      .pricing-top.top-section
+        .container
+          .row
+            h1.h1.pricing__title Pricing
+      .pricing-cards
+        .container
+          .row
+            //BEGIN pricing-card
+            .pricing-card.pricing-card--contractors
+              img(src="assets/img/bg-card-contractor.jpg" alt="Tempeak")
+              .pricing-card__label
+                +svg('user-2')
+                span.h4 Contractors
+              .pricing-card__center
+                h2.h2.pricing-card__title Free
+                .cta.pricing-card__subtitle per month
+              .pricing-card__btn
+                a(href="#").btn.btn--gradient
+                  span Try Now
+            //END   pricing-card
+
+            //BEGIN pricing-card
+            .pricing-card.pricing-card--business
+              img(src="assets/img/bg-card-business.jpg" alt="Tempeak")
+              .pricing-card__label
+                +svg('case')
+                span.h4 Business Owners
+              .pricing-card__center
+                h2.h2.pricing-card__title $99.00
+                .cta.pricing-card__subtitle per month
+              .pricing-card__btn
+                a(href="#").btn.btn--gradient
+                  span Try Now
+            //END   pricing-card
+
+    //end content
+    include ../elements/callback-btn
+    include ../sections/footer
+    include ../sections/scripts

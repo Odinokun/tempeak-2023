@@ -10,8 +10,9 @@ $(function() {
   require('./modules/marquee')();
   require('./modules/accordion')();
   require('./modules/tabs')();
+  require('./modules/scroll-callback-btn')();
+  require('./modules/scrollUp')();
 
-  // require('./modules/scrollUp')();
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();
   // require('./modules/scroll2anchor')();

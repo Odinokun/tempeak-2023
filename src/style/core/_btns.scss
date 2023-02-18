@@ -20,7 +20,8 @@
   border-radius: 12px !important;
   box-shadow: none;
 
-  img {
+  img,
+  svg {
     position: relative;
     z-index: 1;
     display: block;
@@ -84,6 +85,7 @@
     transition: opacity .5s;
     pointer-events: none;
     opacity: 0;
+    border-radius: 12px;
     background-color: #ffbd06;
   }
 }

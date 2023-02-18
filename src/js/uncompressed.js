@@ -6,6 +6,7 @@ $(document).ready(function ($) {
     'index',
     '01-2-about',
     '01-3-how-it-works',
+    '01-4-pricing',
   ]);
 });
 
