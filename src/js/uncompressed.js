@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     '01-2-about',
     '01-3-how-it-works',
     '01-4-pricing',
+    '01-5-download-apps',
   ]);
 });
 

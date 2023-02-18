@@ -1,0 +1,17 @@
+.download-apps {
+  overflow: hidden;
+
+  .index-apps {
+    padding-top: 0;
+
+    @include min(768) {
+      padding-bottom: 150px;
+    }
+  }
+
+  .index-apps__phone {
+    @include min(768) {
+      margin-bottom: 0;
+    }
+  }
+}

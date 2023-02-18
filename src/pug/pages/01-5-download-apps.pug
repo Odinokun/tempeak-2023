@@ -1,0 +1,35 @@
+extends ../_template
+
+block variables
+  - let title       = '01.4 Pricing / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      .download-apps.top-section
+        include ../sections/index-apps
+
+    //end content
+    include ../elements/callback-btn
+    include ../sections/footer
+    include ../sections/scripts
