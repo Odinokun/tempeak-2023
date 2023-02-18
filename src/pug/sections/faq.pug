@@ -1,0 +1,47 @@
+mixin question(question)
+  .faq-questions__row
+    .faq-questions__header
+      h4.h4 #{question}
+    .faq-questions__body
+      .body-m Unfortunately not. tempeak requires all registering contractors to be licensed with a current and valid license/certification number. Your license must be listed in order for your potential employers to know you’re qualified for work.
+
+//BEGIN faq
+.faq
+  //BEGIN faq-header
+  .faq-header
+    .container
+      .row
+        .faq-header__inn
+          .faq-header__item.faq-header__item--contractor.active(data-tab="contractor")
+            .cta Contractors
+          .faq-header__item.faq-header__item--business(data-tab="business")
+            .cta Business Owners
+  //END   faq__header
+  //BEGIN faq-body
+  .faq-body
+    .container
+      .row
+        .col-12.col-lg-6
+          h1.h1.faq-body__title FAQ
+        .col-12.col-lg-6
+          .faq-questions.active#faq-questions--contractor
+            +question('I just graduated from school, but I don’t have my license/certification yet. Can I register with tempeak?')
+            +question('I don’t have much/any work experience? Is that ok?')
+            +question('My license is about to expire. Can I still be registered and get job assignments?')
+            +question('I accepted the job assignment, but now I can’t go due to an emergency. What do I do?')
+            +question('I started my profile, but I’m not getting any assignments. What’s going on?')
+            +question('I just finished my assignment. What should I expect?')
+            +question('Do I have to upload my photo?')
+            +question('Why should I use tempeak as opposed to a traditional staffing agency?')
+            +question('I feel a little uncomfortable uploading my picture and/or license. Is this a secure site?')
+            +question('Why do I have to upload my license?')
+          .faq-questions#faq-questions--business
+            +question('Why do I have to upload my license?')
+            +question('I feel a little uncomfortable uploading my picture and/or license. Is this a secure site?')
+            +question('Why should I use tempeak as opposed to a traditional staffing agency?')
+            +question('I accepted the job assignment, but now I can’t go due to an emergency. What do I do?')
+            +question('My license is about to expire. Can I still be registered and get job assignments?')
+            +question('I don’t have much/any work experience? Is that ok?')
+            +question('I just graduated from school, but I don’t have my license/certification yet. Can I register with tempeak?')
+  //END   faq-body
+//END   faq

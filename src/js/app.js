@@ -8,6 +8,8 @@ $(function() {
   require('./modules/customScrollBar')();
   require('./modules/countTo')();
   require('./modules/marquee')();
+  require('./modules/accordion')();
+  require('./modules/tabs')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

@@ -4,7 +4,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'about',
+    '01-2-about',
+    '01-3-how-it-works',
   ]);
 });
 

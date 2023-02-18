@@ -1,0 +1,30 @@
+.hiw-top__top {
+  .index-about__video {
+    padding-bottom: 40px;
+
+    @include min(768) {
+      padding-bottom: 80px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.hiw-top__title {
+  margin-bottom: 10px;
+
+  @include min(768) {
+    margin-bottom: 20px;
+  }
+}
+
+.hiw-top__subtitle {
+  margin-bottom: 30px;
+  color: #6b6b6b;
+
+  @include min(768) {
+    margin-bottom: 0;
+  }
+}

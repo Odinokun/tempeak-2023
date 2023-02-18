@@ -128,5 +128,13 @@ svg {
 }
 
 .top-section {
+  padding-top: 90px;
+  @include min(768) {
+
+  padding-top: 120px;
+  }
+  @include min(992) {
+
   padding-top: 140px;
+  }
 }

@@ -1,0 +1,51 @@
+extends ../_template
+
+block variables
+  - let title       = '01.3 How It Works / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN hiw-top__top
+      .hiw-top__top.top-section
+        .container
+          .row
+            .col-12.col-md-6
+              h1.h1.hiw-top__title How it works
+              .body-l.hiw-top__subtitle Watch the Video
+            .col-12.col-md-6
+              .index-about__video
+                .index-about__video-imac
+                  a.index-about__video-bg(href='https://youtu.be/XsLuwX22M9g')
+                    picture
+                      source(srcset='https://i.ytimg.com/vi_webp/XsLuwX22M9g/maxresdefault.webp' type='image/webp')
+                      img.index-about__video-media(src='https://i.ytimg.com/vi/XsLuwX22M9g/maxresdefault.jpg' alt='Tempeak')
+                  button.index-about__video-btn
+                    +svg('play')
+      //END   hiw-top__top
+
+      include ../sections/faq
+
+    //end content
+    include ../sections/footer
+    include ../sections/scripts
