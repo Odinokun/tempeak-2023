@@ -73,6 +73,8 @@ select,
 button {
   border-radius: 0 !important;
   outline: none;
+
+  caret-color: $brand;
 }
 
 textarea {
@@ -83,6 +85,108 @@ svg {
   display: block;
   overflow: visible;
 }
+
+/* begin CUSTOM INPUTS, TEXTAREA */
+.input,
+.textarea {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input input,
+.textarea textarea {
+  font-size: 16px;
+  font-weight: 600 !important;
+  line-height: 110%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  padding: 2px 24px 2px 24px;
+  transition: .5s;
+  text-overflow: ellipsis;
+  color: #242424;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px !important;
+  background-color: #fff;
+
+  @include placeholder-color(#6b6b6b);
+}
+
+.input__placeholder,
+.textarea__placeholder,
+.input__error,
+.textarea__error {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: block;
+  width: calc(100% - 4px);
+  padding-top: 10px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+  transition: .5s;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: #fff;
+}
+
+.input__placeholder,
+.textarea__placeholder {
+  color: #6b6b6b;
+}
+
+.input__error,
+.textarea__error {
+  color: #dc5050;
+}
+
+//active
+.input.active,
+.textarea.active {
+  input {
+    padding: 18px 24px 2px 24px;
+  }
+
+  .input__placeholder,
+  .textarea__placeholder {
+    opacity: 1;
+  }
+}
+
+//error
+.input.error,
+.textarea.error {
+  input {
+    padding: 18px 24px 2px 24px;
+    border-color: #dc5050;
+  }
+
+  .input__error,
+  .textarea__error {
+    opacity: 1;
+  }
+}
+
+.textarea {
+  textarea {
+    min-height: 100px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    resize: none;
+  }
+
+  &.error textarea,
+  &.active textarea {
+    padding-top: 26px !important;
+  }
+}
+
+/* end   CUSTOM INPUTS, TEXTAREA */
 
 //изменяем цвет выделения текста мышью
 ::selection {
@@ -95,11 +199,9 @@ svg {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
   min-height: fill-available;
-  //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
 }
@@ -129,12 +231,11 @@ svg {
 
 .top-section {
   padding-top: 90px;
-  @include min(768) {
 
-  padding-top: 120px;
+  @include min(768) {
+    padding-top: 120px;
   }
   @include min(992) {
-
-  padding-top: 140px;
+    padding-top: 140px;
   }
 }

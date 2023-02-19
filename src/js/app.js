@@ -12,6 +12,7 @@ $(function() {
   require('./modules/tabs')();
   require('./modules/scroll-callback-btn')();
   require('./modules/scrollUp')();
+  require('./modules/input-placeholder')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();

@@ -22,24 +22,29 @@
 
 // ===== placeholder style =====
 @mixin placeholder-color($color) {
+  font-weight: 400;
   opacity: 1;
   /* Chrome/Opera/Safari */
   &::-webkit-input-placeholder {
+    font-weight: 400;
     opacity: 1;
     color: $color;
   }
   /* Firefox 19+ */
   &::-moz-placeholder {
+    font-weight: 400;
     opacity: 1;
     color: $color;
   }
   /* IE 10+ */
   &:-ms-input-placeholder {
+    font-weight: 400;
     opacity: 1;
     color: $color;
   }
   /* Firefox 18- */
   &:-moz-placeholder {
+    font-weight: 400;
     opacity: 1;
     color: $color;
   }

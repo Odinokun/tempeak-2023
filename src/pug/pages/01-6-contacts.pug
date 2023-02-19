@@ -1,0 +1,112 @@
+extends ../_template
+
+block variables
+  - let title       = '01.6 Contact / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      .contacts.top-section
+        .container
+          .row
+            //BEGIN left
+            .col-12.col-md-6
+              h1.h1.contacts__title Contacts
+              .contacts__links
+                a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts__info-link
+                  .contacts__info-icon
+                    +svg('map-pin')
+                  .contacts__info-text
+                    span.tech-text-s Address:
+                    span.body-m Columbia, МD
+                a(href="tel:+6677779776").contacts__info-link
+                  .contacts__info-icon
+                    +svg('phone-pin')
+                  .contacts__info-text
+                    span.tech-text-s Phone:
+                    span.body-m 667-777-9776
+                a(href="mailto:service@tempeak.com").contacts__info-link
+                  .contacts__info-icon
+                    +svg('mail-pin')
+                  .contacts__info-text
+                    span.tech-text-s Email:
+                    span.body-m service@tempeak.com
+            //END   left
+
+            //BEGIN right
+            .col-12.col-md-6
+              form.contacts__form
+                .select.contacts__form-select
+                  select
+                    option(value="Subject") Subject
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                    option(value="Subject 1") Subject 1
+                    option(value="Subject 2") Subject 2
+                  span.select__placeholder Subject
+                  span.select__error Some error text
+                .input.contacts__form-input
+                  input(placeholder='Email')
+                  span.input__placeholder Email Address
+                  span.input__error Some error text
+                .input.contacts__form-input.error
+                  input(placeholder='Your Name')
+                  span.input__placeholder Your Name
+                  span.input__error Some error text
+                .input.contacts__form-input
+                  input(placeholder='Phone')
+                  span.input__placeholder Phone
+                  span.input__error Some error text
+                .textarea.contacts__form-textarea
+                  textarea(placeholder='Message')
+                  span.textarea__placeholder Message
+                  span.textarea__error Some error text
+                button.btn.btn--gradient.contacts__btn
+                  span Send message
+            //END   right
+
+
+    //end content
+    include ../elements/callback-btn
+    include ../sections/footer
+    include ../sections/scripts

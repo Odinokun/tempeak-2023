@@ -1,5 +1,40 @@
 module.exports = function () {
 
+  // BEGIN create custom select
+  function findCustomSelects() {
+    const customSelects = document.querySelectorAll('.select select');
+
+    if (customSelects) {
+      for (let i = 0; i < customSelects.length; i++) {
+        createCustomSelect(customSelects[i]);
+      }
+    }
+  }
+
+  function createCustomSelect(select) {
+    $(select).selectmenu({
+      open: function (event, data) {
+        const openSelectId = event.target.id;
+        const openSelectOptions = document.getElementById(openSelectId + '-menu');
+        customScroll(openSelectOptions)
+      },
+      change: function (event, ui) {
+        if (ui.item.index) {
+          $(this).parent('.select').addClass('active')
+        } else {
+          $(this).parent('.select').removeClass('active')
+        }
+      }
+    })
+
+      .selectmenu("menuWidget")
+      .addClass("select--transparent-options");
+  }
+
+  findCustomSelects();
+  // END create custom select
+
+
   // BEGIN create transparent select
   function findTransparentSelects() {
     const transparentSelects = document.querySelectorAll('.select--transparent');
@@ -26,7 +61,6 @@ module.exports = function () {
         const fackingWidth = viewportOffsetLeft + optionsWidth;
 
         if (fackingWidth >= window.innerWidth) {
-          console.log('hello')
           openSelectOptions.parentNode.style.left = 'auto';
           openSelectOptions.parentNode.style.right = '10px';
         }
@@ -34,8 +68,8 @@ module.exports = function () {
       }
     })
 
-    .selectmenu("menuWidget")
-    .addClass("select--transparent-options");
+      .selectmenu("menuWidget")
+      .addClass("select--transparent-options");
   }
 
   findTransparentSelects();
