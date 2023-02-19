@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     '01-4-pricing',
     '01-5-download-apps',
     '01-6-contacts',
+    '01-7-privacy-policy',
   ]);
 });
 
