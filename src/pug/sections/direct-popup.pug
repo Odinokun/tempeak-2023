@@ -1,0 +1,450 @@
+//BEGIN direct-wrap
+.direct-wrap#direct-popup
+  .direct
+    .direct__close
+      +svg('close')
+
+    //BEGIN direct-header
+    .direct-header
+      .container
+        .row
+          h1.h1.direct-header__title Direct hire
+    //END   direct-header
+
+    //BEGIN direct-tabs
+    .direct-tabs
+      .container
+        .row
+          .direct-tabs__inn
+            .direct-tabs__item.direct-tabs__item--contractor.active(data-tab="contractors")
+              .cta Contractors
+            .direct-tabs__item.direct-tabs__item--business(data-tab="business")
+              .cta Business Owners
+    //END   direct-tabs
+
+    //BEGIN direct-form--contractors
+    form.direct-form.direct-form--contractors#direct-form--contractors.active
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Personal information
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='First name')
+                span.input__placeholder First name
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Last name')
+                span.input__placeholder Last name
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Phone')
+                span.input__placeholder Phone
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Email')
+                span.input__placeholder Email
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Address
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") State
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder State
+                span.select__error Some error text
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") City
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder City
+                span.select__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Address')
+                span.input__placeholder Address
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='ZIP')
+                span.input__placeholder ZIP
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Specialization
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Clinical Staff
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder Clinical Staff
+                span.select__error Some error text
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Specialty
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder Specialty
+                span.select__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Working time
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Start of work
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder State
+                span.select__error Some error text
+            .col-12.col-md-6
+              .direct-form__checkboxes
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Full-time
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Part-time
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Temp
+      //END   item
+
+      //BEGIN item
+      .direct-form__item.direct-form__item--slide-wrap
+        .container
+          .row
+            .col-12
+              .direct-form__item-border
+                h4.h4.direct-form__title Salary per hour
+                .direct-form__ui-single-slider
+                  include ../elements/ui-single-slider
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              .textarea.direct-form__textarea
+                textarea(placeholder='Notes')
+                span.input__placeholder Notes
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12.col-md-6.ms-auto
+              button.btn.btn--gradient.direct-form__btn
+                span Send
+      //END   item
+    //END   direct-form--contractors
+
+
+    //BEGIN direct-form--business
+    form.direct-form.direct-form--contractors#direct-form--business
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Personal information
+            .col-12
+              .input.direct-form__input
+                input(placeholder='Business name')
+                span.input__placeholder Business name
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Phone')
+                span.input__placeholder Phone
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Email')
+                span.input__placeholder Email
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Address
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") State
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder State
+                span.select__error Some error text
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") City
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder City
+                span.select__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='Address')
+                span.input__placeholder Address
+                span.input__error Some error text
+            .col-12.col-md-6
+              .input.direct-form__input
+                input(placeholder='ZIP')
+                span.input__placeholder ZIP
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Specialization
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Clinical Staff
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder Clinical Staff
+                span.select__error Some error text
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Specialty
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder Specialty
+                span.select__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              h4.h4.direct-form__title Working time
+            .col-12.col-md-6
+              .select.direct-form__select
+                select
+                  option(value="State") Start of work
+                  option(value="Alabama") Alabama
+                  option(value="Nebraska") Nebraska
+                  option(value="Virginia") Virginia
+                  option(value="New Hampshire") New Hampshire
+                  option(value="Massachusetts") Massachusetts
+                  option(value="Rhode Island") Rhode Island
+                  option(value="Connecticut") Connecticut
+                  option(value="New York") New York
+                  option(value="New Jersey") New Jersey
+                  option(value="Pennsylvania") Pennsylvania
+                  option(value="Delaware") Delaware
+                  option(value="Maryland") Maryland
+                  option(value="North Carolina") North Carolina
+                  option(value="South Carolina") South Carolina
+                  option(value="Utah") Utah
+                span.select__placeholder State
+                span.select__error Some error text
+            .col-12.col-md-6
+              .direct-form__checkboxes
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Full-time
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Part-time
+                label.checkbox.direct-form__checkbox
+                  input(type="checkbox").checkbox__input
+                  span
+                  .cta.checkbox__text Temp
+      //END   item
+
+      //BEGIN item
+      .direct-form__item.direct-form__item--slide-wrap
+        .container
+          .row
+            .col-12
+              .direct-form__item-border
+                h4.h4.direct-form__title Salary per hour
+                .direct-form__ui-single-slider
+                  include ../elements/ui-single-slider
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12
+              .textarea.direct-form__textarea
+                textarea(placeholder='Notes')
+                span.input__placeholder Notes
+                span.input__error Some error text
+      //END   item
+
+      //BEGIN item
+      .direct-form__item
+        .container
+          .row
+            .col-12.col-md-6.ms-auto
+              button.btn.btn--gradient.direct-form__btn
+                span Send
+      //END   item
+    //END   direct-form--business
+//END   direct-wrap

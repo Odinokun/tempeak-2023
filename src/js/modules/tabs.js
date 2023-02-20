@@ -14,4 +14,17 @@ module.exports = function () {
   })
   //end HOW IT WORKS
 
+  //begin DIRECTIONS
+  $('.direct-tabs__item').on('click', function (e) {
+    e.preventDefault();
+    const activeVal = $(this).data('tab');
+
+    $('.direct-tabs__item').removeClass('active');
+    $('.direct-form').fadeOut(0);
+
+    $(this).addClass('active');
+    $('#direct-form--' + activeVal).fadeIn();
+  })
+  //end DIRECTIONS
+
 };

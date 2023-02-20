@@ -4,7 +4,8 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/menu')();
   require('./modules/playYT')();
-  require('./modules/ui')();
+  require('./modules/ui-select')();
+  require('./modules/ui-single-slider')();
   require('./modules/customScrollBar')();
   require('./modules/countTo')();
   require('./modules/marquee')();
@@ -13,10 +14,10 @@ $(function() {
   require('./modules/scroll-callback-btn')();
   require('./modules/scrollUp')();
   require('./modules/input-placeholder')();
+  require('./modules/popup')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();
   // require('./modules/scroll2anchor')();
-  // require('./modules/popup')();
 
 });

@@ -1,5 +1,4 @@
 module.exports = function () {
-
   // BEGIN create custom select
   function findCustomSelects() {
     const customSelects = document.querySelectorAll('.select select');
@@ -12,7 +11,9 @@ module.exports = function () {
   }
 
   function createCustomSelect(select) {
+    const selectWrap = select.parentNode;
     $(select).selectmenu({
+      appendTo: selectWrap,
       open: function (event, data) {
         const openSelectId = event.target.id;
         const openSelectOptions = document.getElementById(openSelectId + '-menu');
@@ -47,7 +48,9 @@ module.exports = function () {
   }
 
   function createTransparentSelect(select) {
+    const selectWrap = select.parentNode;
     $(select).selectmenu({
+      appendTo: selectWrap,
       open: function (event, data) {
         const openSelectId = event.target.id;
         const openSelectOptions = document.getElementById(openSelectId + '-menu');
