@@ -1,0 +1,41 @@
+extends ../_template
+
+block variables
+  - let title       = '01.12 Our Sponsors / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN top
+      .top-section
+        .container
+          .row
+            h1.h1 Our sponsors
+      //END   top
+
+      include ../sections/our-sponsors
+      include ../sections/about-sponsors
+      include ../sections/became-sponsors
+
+    //end content
+    include ../sections/bottom-sections-wrap

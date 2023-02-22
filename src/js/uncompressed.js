@@ -12,6 +12,7 @@ $(document).ready(function ($) {
     '01-6-contacts',
     '01-7-privacy-policy',
     '01-11-search-no-reg',
+    '01-12-our-sponsors',
   ]);
 });
 

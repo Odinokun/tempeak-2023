@@ -1,0 +1,21 @@
+mixin sponsor(img, title, text)
+  .col-12.col-sm-6.col-lg-4.col-xl-3.our-sponsors__item-wrap
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").our-sponsors__item
+      .our-sponsors__logo
+        img(src="assets/img/sponsors/sponsor-" + img + ".png" alt="Sponsor name")
+      .cta.our-sponsors__title #{title}
+      .body-s.our-sponsors__descr #{text}
+
+//BEGIN our-sponsors
+.our-sponsors
+  .container
+    .row.justify-content-center
+      +sponsor('01','MSB Dental Technologie','High-quality dental equipment and parts online 24/7')
+      +sponsor('02','PAT','The More Important the Work, the More Important the Rest')
+      +sponsor('03','VANORA','Mental models for designers')
+      +sponsor('04','ORFFA','20 psychological principles applied to product design')
+      +sponsor('05','Gowan Ind.','Email Love - Email Inspiration, Templates and Discovery')
+      +sponsor('06','Hexcel Dental','Cinema 4D Visual Explorations by David Milan')
+      +sponsor('07','Grurit','How to create SVG-ready icon symbols in Sketch')
+      +sponsor('08','Albaugh Dental','How to create SVG-ready icon symbols in Sketch')
+//END   our-sponsors
