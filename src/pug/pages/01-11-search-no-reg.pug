@@ -1,0 +1,109 @@
+extends ../_template
+
+block variables
+  - let title       = '01.11 Search no registation / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin person-row(img, rating, rewiews)
+  //BEGIN person-row
+  .person-row
+    //BEGIN left
+    .person-row__left
+      .person-row__ava
+        img(src="assets/img/persons/person-" + img + ".jpg" alt="avatar")
+    //END   left
+
+    //BEGIN main
+    .person-row__main
+      h3.h3.person-row__title George Smith
+      //BEGIN info
+      .person-row__doc-info
+        span.cta RDA
+        span.cta General dentist
+        span.body-s.person-row__doc-info-decor |
+        span.body-s Los Angeles CA
+        span.body-s 5-10 years of experience
+      //END   info
+      //BEGIN rating
+      .person-row__rating
+        .person-row__rating-text.cta Rate:
+        .rating(data-rating="" + rating)
+          .rating__scale
+            .rating__scale-bg
+          .rating__text.cta
+            strong #{rating}
+            a(href='#') (#{rewiews})
+      //END   rating
+      //BEGIN verified
+      .person-row__verified
+        .person-row__verified-security-icon
+          +svg('security')
+        .cta Verified
+        .body-s by Tempeak
+        .person-row__verified-info-icon
+          +svg('info')
+          .person-row__verified-info-tooltip
+            //.body-s Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+      //END   verified
+    //END   main
+
+    //BEGIN right
+    .person-row__right
+      a(href="#").btn.btn--gradient.person-row__btn
+        span Send request
+    //END   right
+  //END   person-row
+
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--no-reg.top-section
+        .container
+          .row
+            a(href="#").page-top__back-link
+              .page-top__back-link-btn
+                +svg('slider-arr')
+              span.cta.page-top__back-link-text Back to search
+            h1.h1.page-top__title Search result
+            .body-m.page-top__subtitle We are finded 1,208 temp staff for your company
+      //END   page-top
+
+      //BEGIN search-res
+      .search-res__list
+        .container
+          .row
+            +person-row('01', '5', '75')
+            +person-row('02', '1.2', '167')
+            +person-row('03', '4.7', '5')
+            +person-row('04', '3.4', '27')
+            +person-row('01', '0', '61')
+      //END   search-res
+      .search-res__more
+        .container
+          .row
+            button.btn.btn--white-and-black.search-res__more-btn Load more
+
+
+    //end content
+    include ../sections/bottom-sections-wrap

@@ -18,6 +18,8 @@
 @import 'elements/burger';
 @import 'elements/clinic-card';
 @import 'elements/ui-single-slider';
+@import 'elements/person-row';
+@import 'elements/rating';
 //@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
@@ -41,6 +43,7 @@
 
 @import 'sections/faq';
 @import 'sections/direct-popup';
+@import 'sections/page-top';
 
 //sliders
 @import "sliders/jobs-slider";
@@ -52,3 +55,4 @@
 @import 'pages/download-apps';
 @import 'pages/contacts';
 @import 'pages/privacy';
+@import 'pages/search';

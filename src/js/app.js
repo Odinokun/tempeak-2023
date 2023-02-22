@@ -15,6 +15,7 @@ $(function() {
   require('./modules/scrollUp')();
   require('./modules/input-placeholder')();
   require('./modules/popup')();
+  require('./modules/rating-scale')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();

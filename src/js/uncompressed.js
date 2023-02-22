@@ -3,6 +3,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'popups-page',
     'index',
     '01-2-about',
     '01-3-how-it-works',
@@ -10,6 +11,7 @@ $(document).ready(function ($) {
     '01-5-download-apps',
     '01-6-contacts',
     '01-7-privacy-policy',
+    '01-11-search-no-reg',
   ]);
 });
 

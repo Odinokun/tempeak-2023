@@ -1,0 +1,51 @@
+.page-top {
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  .row {
+    position: relative;
+  }
+}
+
+.page-top--no-reg {
+  background-image: url('../img/bg-top-page-pink.jpg');
+}
+
+.page-top__back-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-150%);
+  text-decoration: none;
+}
+
+.page-top__back-link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border: 2px solid #242424;
+  border-radius: 50%;
+
+  svg {
+    width: 7px;
+    height: 12px;
+    margin-left: -2px;
+    transform: rotate(180deg);
+  }
+}
+
+.page-top__title {
+  margin-bottom: 0;
+}
+
+.page-top__subtitle {
+  margin-bottom: 0;
+}

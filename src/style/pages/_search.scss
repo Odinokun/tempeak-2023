@@ -1,0 +1,19 @@
+.search-res__list {
+  margin-bottom: 30px;
+
+  @include min(992) {
+    margin-bottom: 60px;
+  }
+}
+
+.search-res__more {
+  margin-bottom: 60px;
+
+  @include min(992) {
+    margin-bottom: 100px;
+  }
+
+  .row {
+    justify-content: center;
+  }
+}
