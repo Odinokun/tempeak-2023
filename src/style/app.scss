@@ -20,12 +20,11 @@
 @import 'elements/ui-single-slider';
 @import 'elements/person-row';
 @import 'elements/rating';
-//@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
-//@import 'elements/popup';
 
 //section
+@import 'sections/popups';
 @import 'sections/header';
 @import 'sections/footer';
 @import 'sections/index-reg';
@@ -42,8 +41,14 @@
 @import 'sections/about-we-do';
 
 @import 'sections/faq';
-@import 'sections/direct-popup';
 @import 'sections/page-top';
+
+//popups
+@import 'popups/direct-popup';
+@import 'popups/full-access-popup';
+@import 'popups/get-more-info-popup';
+@import 'popups/answers-popup';
+@import 'popups/reviews-popup';
 
 //sliders
 @import "sliders/jobs-slider";

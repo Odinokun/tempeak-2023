@@ -7,7 +7,7 @@ block variables
   - let breadcrumbs     = 'TemPeak breadcrumbs'
   - let headerClass = 'reddy'
 
-mixin person-row(img, rating, rewiews)
+mixin person-row(img, rating, reviews)
   //BEGIN person-row
   .person-row
     //BEGIN left
@@ -35,7 +35,7 @@ mixin person-row(img, rating, rewiews)
             .rating__scale-bg
           .rating__text.cta
             strong #{rating}
-            a(href='#') (#{rewiews})
+            a(href='#') (#{reviews})
       //END   rating
       //BEGIN verified
       .person-row__verified
@@ -46,7 +46,7 @@ mixin person-row(img, rating, rewiews)
         .person-row__verified-info-icon
           +svg('info')
           .person-row__verified-info-tooltip
-            //.body-s Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
       //END   verified
     //END   main
 
@@ -56,7 +56,6 @@ mixin person-row(img, rating, rewiews)
         span Send request
     //END   right
   //END   person-row
-
 
 block content
   .main-wrap

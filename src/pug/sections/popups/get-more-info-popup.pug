@@ -1,0 +1,43 @@
+//BEGIN get-more-info-wrap
+#get-more-info-popup.popup
+  .get-more-info-popup.popup-body
+    .popup-close-btn
+      +svg('close')
+
+    //BEGIN get-more-info-header
+    .get-more-info-header
+      .container
+        .row
+          h1.h1.get-more-info__title Get more info
+    //END   get-more-info-header
+
+    //BEGIN get-more-info-form
+    .get-more-info-form
+      .container
+        .row
+          .col-12.col-md-6
+            .input
+              input(placeholder='First name')
+              span.input__placeholder First name
+              span.input__error Some error text
+          .col-12.col-md-6
+            .input
+              input(placeholder='First name')
+              span.input__placeholder First name
+              span.input__error Some error text
+          .col-12.col-md-6
+            .input
+              input(placeholder='First name')
+              span.input__placeholder First name
+              span.input__error Some error text
+          .col-12.col-md-6
+            .input
+              input(placeholder='First name')
+              span.input__placeholder First name
+              span.input__error Some error text
+        .row
+          .col-12.col-md-6.ms-auto
+            button.btn.btn--gradient.get-more-info__btn
+              span Send
+    //END   get-more-info-form
+//END   get-more-info-wrap

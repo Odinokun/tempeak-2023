@@ -1,0 +1,47 @@
+mixin search-row(img)
+  //BEGIN person-row
+  .person-row
+    //BEGIN left
+    .person-row__left
+      .person-row__ava
+        img(src="assets/img/persons/person-" + img + ".jpg" alt="user")
+    //END   left
+
+    //BEGIN main
+    .person-row__main
+      h3.h3.person-row__title George Smith
+      //BEGIN info
+      .person-row__doc-info
+        span.cta RDA
+        span.cta General dentist
+        span.body-s.person-row__doc-info-decor |
+        span.body-s Los Angeles CA
+        span.body-s 5-10 years of experience
+        span.body-s $60 per hour
+      //END   info
+      a(href="#").double-btn
+        span.cta More details
+    //END   main
+  //END   person-row
+
+//BEGIN answers-wrap
+#answers-popup.popup
+  .answers-popup.popup-body
+    .popup-close-btn
+      +svg('close')
+
+    //BEGIN answers-header
+    .answers-header
+      .container
+        h1.h1.answers__title Answers on your opportunities
+    //END   answers-header
+
+    //BEGIN answers-list
+    .answers-list
+      .container
+        .row
+          +search-row('01')
+          +search-row('02')
+          +search-row('03')
+    //END   answers-list
+//END   answers-wrap

@@ -1,26 +1,26 @@
 module.exports = function () {
 
-  // $('.popup-open').on('click', function(e) {
-  //   e.preventDefault();
-  //
-  //   let targetPopup = '#' + $(this).data('popup');
-  //   $(targetPopup + ', #popup__layer').fadeIn();
-  // });
-  //
-  // $('#popup__layer, .popup__close').on('click', function() {
-  //   $('.popup, #popup__layer').fadeOut();
-  // });
-
-  $('#callback-btn').on('click', function (e) {
+  $('.popup-open-btn').on('click', function (e) {
     e.preventDefault();
+    let targetPopup = '#' + $(this).data('popup');
 
-    $('#direct-popup').fadeIn();
+    $(targetPopup).fadeIn();
     $('body').addClass('hide-scroll');
   });
 
-  $('.direct__close').on('click', function () {
-    $('#direct-popup').fadeOut();
-    $('body').removeClass('hide-scroll');
+  $('.popup-close-btn').on('click', function () {
+    closePopups();
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.code === 'Escape') {
+      closePopups();
+    }
+  });
+
+  function closePopups() {
+    $('.popup').fadeOut();
+    $('body').removeClass('hide-scroll');
+  }
 
 };
