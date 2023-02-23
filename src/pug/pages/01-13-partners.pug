@@ -1,0 +1,61 @@
+extends ../_template
+
+block variables
+  - let title       = '01.13 Partner / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      //BEGIN top
+      .partners-top
+        .container
+          .row
+            h1.h2.partners-top__title Becoming a partner of Tempeak Dental Staffing Services is a great opportunity for individuals or businesses who are interested in the dental industry and want to be a part of a reputable and growing company.
+            .partners-top__img
+              img(src="assets/img/bg-partners-top-mob.jpg" alt="tempeak")
+      //END   top
+
+      //BEGIN became-partner
+      .became-partner
+        .container
+          .row
+            .h4.became-partner__text Our partnership program is designed to provide our partners with the resources, support, and training they need to successfully promote and sell our dental staffing services.
+            a(href="#").btn.btn--gradient.became-partner__btn
+              span Became a partner
+      //END   became-partner
+
+      //BEGIN about-run-text
+      .about-run-text
+        .about-run-text__left
+          include ../elements/marquee
+        .about-run-text__right
+          include ../elements/marquee
+      //END   about-run-text
+
+
+      include ../sections/about-estimate-2
+      include ../sections/about-sponsors-2
+      include ../sections/became-sponsors-2
+
+    //end content
+    include ../sections/bottom-sections-wrap

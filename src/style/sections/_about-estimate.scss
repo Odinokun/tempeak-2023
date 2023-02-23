@@ -6,6 +6,9 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  & + .about-sponsors {
+    padding-top: 0;
+  }
 }
 
 .about-estimate__title {

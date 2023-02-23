@@ -13,6 +13,7 @@ $(document).ready(function ($) {
     '01-7-privacy-policy',
     '01-11-search-no-reg',
     '01-12-our-sponsors',
+    '01-13-partners',
   ]);
 });
 

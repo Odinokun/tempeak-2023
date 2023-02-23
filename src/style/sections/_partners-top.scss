@@ -1,0 +1,94 @@
+.partners-top {
+  position: relative;
+
+  &::before {
+    @include min(768) {
+      position: absolute;
+      top: 140px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      content: '';
+      background-image: url('../img/bg-partners-top.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+    @include min(992) {
+      background-position: 50% 100%;
+      background-size: contain;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include min(768) {
+      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+    @include min(992) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+}
+
+.partners-top__title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include min(768) {
+    margin-bottom: 0;
+  }
+}
+
+.partners-top__img {
+  width: 100%;
+  padding: 0;
+
+  @include min(768) {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.became-partner {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.became-partner__text {
+  max-width: 610px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include min(768) {
+    margin-bottom: 40px;
+  }
+}
+
+.became-partner__btn {
+  @include min(768) {
+    margin-bottom: 50px;
+  }
+}

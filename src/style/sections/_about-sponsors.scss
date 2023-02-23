@@ -1,10 +1,10 @@
 .about-sponsors {
   padding-top: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 
   @include min(992) {
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 }
 
@@ -19,14 +19,18 @@
 
 .about-sponsors__subtitle {
   max-width: 1050px;
-  margin-bottom: 30px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.about-sponsors__list {
+  padding-top: 30px;
 
   @include min(768) {
-    margin: 0 auto 80px;
+    padding-top: 70px;
   }
   @include min(992) {
-    margin: 0 auto 110px;
+    padding-top: 100px;
   }
 }
 
@@ -44,14 +48,14 @@
   align-items: center;
   width: 70px;
   height: 70px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   border-radius: 20px;
   background: #fff6de;
 
   @include min(992) {
     width: 80px;
     height: 80px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
   }
 
   img {
