@@ -8,6 +8,8 @@ module.exports = [
   './node_modules/simplebar/dist/simplebar.js',
   './src/vendors/counterTo.js',
   './node_modules/jquery.marquee/jquery.marquee.js',
+  './src/vendors/DateRangePicker/moment.min.js',
+  './src/vendors/DateRangePicker/daterangepicker.min.js'
 
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
   // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
