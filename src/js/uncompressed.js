@@ -3,19 +3,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
-    'popups-page',
-    'index',
-    '01-2-about',
-    '01-3-how-it-works',
-    '01-4-pricing',
-    '01-5-download-apps',
-    '01-6-contacts',
-    '01-7-privacy-policy',
-    '01-11-search-no-reg',
-    '01-12-our-sponsors',
-    '01-13-partners',
-    '02-1-sign-up',
-    '02-5-log-in',
+    'menu-page',
   ]);
 });
 

@@ -41,6 +41,12 @@
   }
 }
 
+.btn--disabled {
+  color: #6b6b6b;
+  border: 2px solid #e9e9e9;
+  background-color: #e9e9e9;
+}
+
 .btn--white {
   border: 2px solid #fff;
   background-color: #fff;
@@ -50,13 +56,25 @@
   }
 }
 
+.btn--black {
+  color: #fff;
+  border: 2px solid #000;
+  background-color: #000;
+
+  &:hover {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+
 .btn--white-and-black {
   border: 2px solid #242424;
   background-color: #fff;
 
   &:hover {
-    border-color: $brand;
     color: $brand;
+    border-color: $brand;
   }
 }
 

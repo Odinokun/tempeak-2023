@@ -1,0 +1,43 @@
+extends ../_template
+
+block variables
+  - let title       = '05.1 Delete profile / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      .sign-up
+        //BEGIN header
+        .sign-up__header
+          .container
+            .row
+              .icon
+                img(src="assets/img/anim-gif/trash.gif" alt="Tempeak")
+            .row
+              h1.h1.center.sign-up__title Delete profile
+              h4.h4.sign-up__subtitle-2 Do you really want to delete your profile? If no, tap on Cancel. If yes, please type following word: DELETE
+        //END   header
+
+
+        //BEGIN sign-up-form
+        form.sign-up-form.active
+          include ../elements/forms/delete-form
+        //END   sign-up-form
+
+        //BEGIN sign-up-footer
+        .sign-up-footer
+          .container
+            .row
+              .col-12
+                .sign-up-form__login <a href="#">Cancel<a>
+        //END   sign-up-footer
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
+

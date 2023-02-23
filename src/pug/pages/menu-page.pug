@@ -1,0 +1,78 @@
+extends ../_template
+
+block variables
+  - let title       = 'TemPeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin link(link)
+  li
+    a(href="http://localhost:3000/" + link + ".html" target="_blank") #{link}
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+    main.main
+      .top-section
+        .container
+          .row
+            .col-12.col-md-6
+              ul
+                +link('menu-page')
+                +link('index')
+                +link('01-2-about')
+                +link('01-3-how-it-works')
+                +link('01-4-pricing')
+                +link('01-5-download-apps')
+                +link('01-6-contacts')
+                +link('01-7-privacy-policy')
+                +link('01-11-search-no-reg')
+                +link('01-12-our-sponsors')
+                +link('01-13-partners')
+                +link('02-1-sign-up')
+                +link('02-5-log-in')
+                +link('03-1-reset')
+                +link('03-1-1-reset-confirm')
+                +link('03-1-1-reset-error')
+                +link('03-2-reset-password')
+                +link('04-1-restore')
+                +link('05-1-delete')
+                +link('05-2-delete-yes')
+                +link('06-2-change-password')
+                +link('')
+                +link('')
+                +link('')
+                +link('')
+                +link('')
+                +link('')
+            .col-12.col-md-6
+              button.btn.btn--gradient.popup-open-btn(data-popup="direct-popup")
+                span Direct popup
+              br
+              br
+              button.btn.btn--gradient.popup-open-btn(data-popup="full-access-popup")
+                span Full access popup
+              br
+              br
+              button.btn.btn--gradient.popup-open-btn(data-popup="get-more-info-popup")
+                span Get more info popup
+              br
+              br
+              button.btn.btn--gradient.popup-open-btn(data-popup="answers-popup")
+                span Answers popup
+              br
+              br
+              button.btn.btn--gradient.popup-open-btn(data-popup="reviews-popup")
+                span Reviews popup
+              br
+              br
+              button.btn.btn--gradient.popup-open-btn(data-popup="request-popup")
+                span Send request popup
+              br
+              br
+
+
+    //end content
+    include ../sections/bottom-sections-wrap

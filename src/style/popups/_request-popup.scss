@@ -1,0 +1,33 @@
+.request-form {
+  width: 100%;
+
+  .textarea {
+    width: 100%;
+    margin-bottom: 20px;
+
+    textarea {
+      min-height: 120px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+
+    @include min(768) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.request-header {
+  width: 100%;
+}
+
+.request__title {
+  margin-bottom: 20px;
+
+  @include min(768) {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,42 @@
+extends ../_template
+
+block variables
+  - let title       = '03.1 Reset password - info / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      .sign-up
+        //BEGIN header
+        .sign-up__header
+          .container
+            .row
+              .icon
+                img(src="assets/img/anim-gif/email.gif" alt="Tempeak")
+            .row
+              h1.h1.center.sign-up__title Reset password
+        //END   header
+
+
+        //BEGIN sign-up-form
+        form.sign-up-form.active
+          include ../elements/forms/reset-form
+        //END   sign-up-form
+
+        //BEGIN sign-up-footer
+        .sign-up-footer
+          .container
+            .row
+              .col-12
+                .sign-up-form__login <a href="#">Cancel<a>
+        //END   sign-up-footer
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
+

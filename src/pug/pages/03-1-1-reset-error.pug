@@ -1,0 +1,31 @@
+extends ../_template
+
+block variables
+  - let title       = '03.1 Reset password - info / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      .sign-up.sign-up--lg
+        //BEGIN header
+        .sign-up__header
+          .container
+            .row
+              .icon
+                img(src="assets/img/anim-gif/error.gif" alt="Tempeak")
+            .row
+              h3.h3.sign-up__subtitle We can't find a user with that e-mail address
+            .row
+              button.btn.btn--gradient.sign-up-form__btn-sm
+                span Try again
+        //END   header
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
+

@@ -23,21 +23,24 @@
 
 .sign-up {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 100px 0 60px 0;
   background-image: url('../img/bg-sign-up-business.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 
   @include min(768) {
-    padding: 120px 0;
+    padding: 120px 0 80px 0;
   }
 
   .container {
     position: relative;
     z-index: 1;
-    max-width: 500px;
+    max-width: 520px;
   }
 
   &::before,
@@ -67,8 +70,29 @@
   }
 }
 
+.sign-up--lg {
+  .container {
+    max-width: 620px;
+  }
+}
+
+.sign-up--rounds {
+  padding-bottom: 0;
+}
+
 .sign-up__title {
   margin-bottom: 30px;
+}
+
+.sign-up__subtitle {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sign-up__subtitle-2 {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 
@@ -119,7 +143,6 @@
 
 .sign-up-form__checkbox {
   padding-top: 10px;
-  padding-bottom: 20px;
 
   .cta {
     font-weight: 400;
@@ -144,6 +167,11 @@
 
 .sign-up-form__btn {
   width: 100%;
+  margin-top: 20px;
+}
+
+.sign-up-form__btn-sm {
+  margin: 0 auto;
 }
 
 .sign-up-form__or-text {
@@ -236,10 +264,14 @@
 .sign-up-form__login {
   font-size: 12px;
   line-height: 110%;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 30px;
   text-align: center;
   color: #6b6b6b;
+
+  @include min(768) {
+    padding-top: 40px;
+  }
 
   a {
     font-weight: 500;

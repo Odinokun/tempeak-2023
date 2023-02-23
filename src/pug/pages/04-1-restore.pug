@@ -1,0 +1,46 @@
+extends ../_template
+
+block variables
+  - let title       = '04.1 restore profile / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin ava(img, className)
+  div(class="index-top__ava index-top__ava--" + className)
+    img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      .sign-up.sign-up--rounds
+        //BEGIN header
+        .sign-up__header
+          .container
+            .row
+              .icon
+                img(src="assets/img/anim-gif/autorenew.gif" alt="Tempeak")
+            .row
+              h1.h1.center Restore profile
+              h4.h4.sign-up__subtitle Do you want to restore your profile?
+        //END   header
+
+        .restore-btns
+          .container
+            .row
+              .col-6
+                a(href="#").btn.btn--white-and-black
+                  span No
+              .col-6
+                a(href="#").btn.btn--black
+                  span Yes
+
+        .restore-rounds
+          include ../elements/index-top-rounds
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
+

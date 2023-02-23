@@ -20,6 +20,7 @@
 @import 'elements/ui-single-slider';
 @import 'elements/person-row';
 @import 'elements/rating';
+@import 'elements/banners';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 
@@ -53,6 +54,7 @@
 @import 'popups/get-more-info-popup';
 @import 'popups/answers-popup';
 @import 'popups/reviews-popup';
+@import 'popups/request-popup';
 
 //sliders
 @import "sliders/jobs-slider";
@@ -66,3 +68,4 @@
 @import 'pages/privacy';
 @import 'pages/search';
 @import 'pages/sign-up';
+@import 'pages/restore';

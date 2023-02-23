@@ -16,6 +16,7 @@ $(function() {
   require('./modules/input-placeholder')();
   require('./modules/popup')();
   require('./modules/rating-scale')();
+  require('./modules/banner')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();

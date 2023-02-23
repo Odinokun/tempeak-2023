@@ -1,0 +1,27 @@
+extends ../_template
+
+block variables
+  - let title       = 'TemPeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      include ../sections/index-top
+      include ../sections/index-count
+      include ../sections/index-jobs
+      include ../sections/index-about
+      include ../sections/index-different
+      include ../sections/index-personal
+      include ../sections/index-apps
+      include ../sections/index-reg
+
+    //end content
+    include ../elements/banners/delete-yes-banner
+    include ../sections/bottom-sections-wrap

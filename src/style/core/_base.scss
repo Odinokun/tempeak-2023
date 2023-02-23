@@ -307,3 +307,33 @@ svg {
   }
 }
 
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 30px;
+  border-radius: 20px;
+  background-color: #fff6de;
+
+  @include min(768) {
+    width: 80px;
+    height: 80px;
+  }
+
+  img {
+    display: block;
+    width: 28px;
+    height: 28px;
+
+    @include min(768) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.icon--white {
+  background-color: #fff;
+}
