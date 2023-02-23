@@ -1,14 +1,14 @@
 extends ../_template
 
 block variables
-  - let title       = '02.1 Sign up CO / Tempeak'
+  - let title       = '02.5 Login / Tempeak'
   - let description = 'TemPeak'
 
   - let breadcrumbs     = 'TemPeak breadcrumbs'
   - let headerClass = 'reddy'
 
 block content
-  .main-wrap.main-wrap--contractor
+  .main-wrap
     include ../sections/headers/header-unreg
 
     //begin content
@@ -18,29 +18,15 @@ block content
         .sign-up__header
           .container
             .row
-              h1.h1.sign-up__title Sign up
+              h1.h1.sign-up__title Log in
 
         //END   header
-        //BEGIN sign-up-tabs
-        .sign-up-tabs
-          .container
-            .row
-              .sign-up-tabs__inn
-                .sign-up-tabs__item.sign-up-tabs__item--contractor.active(data-tab="contractor")
-                  .cta Contractor
-                .sign-up-tabs__item.sign-up-tabs__item--business(data-tab="business")
-                  .cta Business Owner
-        //END   sign-up-tabs
 
-        //BEGIN sign-up-form--contractors
-        form.sign-up-form.active#sign-up-form--contractor
-          include ../elements/sign-up-form
-        //END   sign-up-form--contractors
 
-        //BEGIN sign-up-form--business
-        form.sign-up-form#sign-up-form--business
-          include ../elements/sign-up-form
-        //END   sign-up-form--business
+        //BEGIN sign-up-form
+        form.sign-up-form.active
+          include ../elements/log-in-form
+        //END   sign-up-form
 
         //BEGIN sign-up-footer
         .sign-up-footer
@@ -67,7 +53,8 @@ block content
                   +svg('linkedin')
             .row
               .col-12
-                .sign-up-form__login Already have an account? <a href="#">Log in<a>
+                .sign-up-form__login New user? <a href="#">Sign up<a>
         //END   sign-up-footer
     //end content
     include ../sections/bottom-sections-wrap-no-footer
+

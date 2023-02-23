@@ -38,7 +38,7 @@ module.exports = function () {
 
     $(this).addClass('active');
     $('.main-wrap').addClass('main-wrap--' + activeVal);
-    $('#sign-up-form--' + activeVal).fadeIn();
+    $('#sign-up-form--' + activeVal).fadeIn(0);
   })
   //end SIGN UP
 

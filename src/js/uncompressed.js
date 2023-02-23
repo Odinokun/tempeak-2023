@@ -15,6 +15,7 @@ $(document).ready(function ($) {
     '01-12-our-sponsors',
     '01-13-partners',
     '02-1-sign-up',
+    '02-5-log-in',
   ]);
 });
 

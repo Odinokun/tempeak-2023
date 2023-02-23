@@ -25,12 +25,13 @@
   position: relative;
   min-height: 100vh;
   padding: 100px 0;
+  background-image: url('../img/bg-sign-up-business.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 
   @include min(768) {
     padding: 120px 0;
-  }
-  @include min(992) {
-    padding: 140px 0;
   }
 
   .container {
@@ -129,6 +130,16 @@
     font-weight: 600;
     color: #242424;
   }
+}
+
+.sign-up-form__forgot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 34px;
+  padding-top: 10px;
+  user-select: none;
+  text-decoration: none;
 }
 
 .sign-up-form__btn {

@@ -10,20 +10,16 @@
         input(placeholder='Password' type="password")
         span.input__placeholder Password
         span.input__error Some error text
-    .col-12
-      .input.sign-up-form__input
-        input(placeholder='Confirm password' type="password")
-        span.input__placeholder Confirm password
-        span.input__error Some error text
 
   .row
-    .col-12
+    .col-6
       label.checkbox.sign-up-form__checkbox
         input(type="checkbox").checkbox__input
         span
-        div.cta.checkbox__text I agree to the <a href="#">Terms of Use</a>
-
+        div.cta.checkbox__text Remember me
+    .col-6
+      a(href="#").tech-text-s.sign-up-form__forgot Forgot password?
   .row
     .col-12
       button.btn.btn--gradient.sign-up-form__btn
-        span Sign up
+        span Log in
