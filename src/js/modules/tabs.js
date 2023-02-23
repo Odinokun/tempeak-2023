@@ -27,4 +27,19 @@ module.exports = function () {
   })
   //end DIRECTIONS
 
+  //begin SIGN UP
+  $('.sign-up-tabs__item').on('click', function (e) {
+    e.preventDefault();
+    const activeVal = $(this).data('tab');
+
+    $('.main-wrap').removeClass('main-wrap--contractor, main-wrap--business');
+    $('.sign-up-tabs__item').removeClass('active');
+    $('.sign-up-form').fadeOut(0);
+
+    $(this).addClass('active');
+    $('.main-wrap').addClass('main-wrap--' + activeVal);
+    $('#sign-up-form--' + activeVal).fadeIn();
+  })
+  //end SIGN UP
+
 };

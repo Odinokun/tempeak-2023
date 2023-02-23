@@ -1,0 +1,86 @@
+extends ../_template
+
+block variables
+  - let title       = '02.1 Sign up CO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap.main-wrap--contractor
+    //BEGIN header
+    header.header#header
+      .header__inn.header__inn--main
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/header__right-mob
+      .header__inn.header__inn--second
+        .container
+          .row
+            include ../elements/logo
+            include ../elements/menu/menu
+            include ../elements/logins
+    //END   header
+
+    //begin content
+    main.main
+      .sign-up
+        //BEGIN header
+        .sign-up__header
+          .container
+            .row
+              h1.h1.sign-up__title Sign up
+
+        //END   header
+        //BEGIN sign-up-tabs
+        .sign-up-tabs
+          .container
+            .row
+              .sign-up-tabs__inn
+                .sign-up-tabs__item.sign-up-tabs__item--contractor.active(data-tab="contractor")
+                  .cta Contractor
+                .sign-up-tabs__item.sign-up-tabs__item--business(data-tab="business")
+                  .cta Business Owner
+        //END   sign-up-tabs
+
+        //BEGIN sign-up-form--contractors
+        form.sign-up-form.active#sign-up-form--contractor
+          include ../elements/sign-up-form
+        //END   sign-up-form--contractors
+
+        //BEGIN sign-up-form--business
+        form.sign-up-form#sign-up-form--business
+          include ../elements/sign-up-form
+        //END   sign-up-form--business
+
+        //BEGIN sign-up-footer
+        .sign-up-footer
+          .container
+            .row
+              .col-12
+                .sign-up-form__or-text OR sign up with
+            .row
+              .col-6
+                a(href="#").sign-up-form__soc-btn.sign-up-form__soc-btn--google
+                  span.cta Google
+                  +svg('google')
+              .col-6
+                a(href="#").sign-up-form__soc-btn.sign-up-form__soc-btn--facebook
+                  span.cta Facebook
+                  +svg('facebook')
+              .col-6
+                a(href="#").sign-up-form__soc-btn.sign-up-form__soc-btn--apple
+                  span.cta Apple
+                  +svg('apple')
+              .col-6
+                a(href="#").sign-up-form__soc-btn.sign-up-form__soc-btn--linkedin
+                  span.cta Linked in
+                  +svg('linkedin')
+            .row
+              .col-12
+                .sign-up-form__login Already have an account? <a href="#">Log in<a>
+        //END   sign-up-footer
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
