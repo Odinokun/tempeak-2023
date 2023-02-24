@@ -1,0 +1,40 @@
+extends ../_template
+
+block variables
+  - let title       = '04.1 restore profile / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin ava(img, className)
+  div(class="index-top__ava index-top__ava--" + className)
+    img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      mixin ava(img, className)
+        div(class="index-top__ava index-top__ava--" + className)
+          img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
+
+      //BEGIN index-top
+      .index-top.top-section
+        .container
+          .row
+            h1.index-top__title.h1 Search Contractor
+            .index-top__subtitle.body-l Unlike traditional staffing agencies, we connect you directly with professional staff
+
+            include ../elements/search-contractor-bo
+
+            .tech-text-s.index-top__undertitle The search is based on the State <a href="#">CA</a> on your profile. To change a other state, please change the geolocation in your <a href="#">profile settings.</a>
+
+            include ../elements/index-top-rounds
+        include ../elements/ad-banner
+      //END   index-top
+    //end content
+    include ../sections/bottom-sections-wrap-no-footer
+
