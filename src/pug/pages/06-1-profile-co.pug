@@ -1,0 +1,216 @@
+extends ../_template
+
+block variables
+  - let title       = '06.1 Profile CO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--co
+        .container
+          .row
+            .page-top__verified
+              //BEGIN verified
+              .person-row__verified
+                .person-row__verified-security-icon
+                  +svg('security')
+                .cta Verified
+                .body-s by Tempeak
+                .person-row__verified-info-icon
+                  +svg('info')
+                  .person-row__verified-info-tooltip
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+              //END   verified
+      //END   page-top
+
+      //BEGIN profile
+      .profile
+        .container
+          //BEGIN profile-card
+          .profile-card
+            .profile-card__ava
+              img(src="assets/img/profile-ava.jpg" alt="avatar")
+            h3.h3.profile-card__title George Smith
+            .cta.profile-card__position RDA General dentist
+            .body-s.profile-card__experience 5-10 years of experience
+            .profile-card__rating
+              //BEGIN rating
+              .person-row__rating
+                .person-row__rating-text.cta Rate:
+                .rating(data-rating="4.8")
+                  .rating__scale
+                    .rating__scale-bg
+                  .rating__text.cta
+                    strong 4.8
+                    a(href='#') (75)
+              //END   rating
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+              .profile-card__download-link-icon
+                +svg('file')
+              .profile-card__download-link-text.cta Download Resume
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+              .profile-card__download-link-icon
+                +svg('file')
+              .profile-card__download-link-text.cta Download License
+          //END   profile-card
+
+          //BEGIN profile-body
+          .profile-body
+            //BEGIN info
+            .profile-body__info
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Address
+                .col-12.col-md-6.profile-body__info-item
+                  .cta 200 N. Spring Street, Los Angeles CA 90012
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Miles available to commute
+                .col-12.col-md-6.profile-body__info-item
+                  .cta 85 miles
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Education
+                .col-12.col-md-6.profile-body__info-item
+                  .cta California Medical College, 2018
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s License number
+                .col-12.col-md-6.profile-body__info-item
+                  .cta 000484812345
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Email
+                .col-12.col-md-6.profile-body__info-item
+                  .cta g.smith@gmail.com
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Phone
+                .col-12.col-md-6.profile-body__info-item
+                  .cta 800 806 1234
+              .row
+                .col-12.col-md-6.profile-body__info-item
+                  .tech-text-s Birthday
+                .col-12.col-md-6.profile-body__info-item
+                  .cta 06 december 1988
+            //END   info
+
+            //BEGIN salary
+            .profile-body__salary
+              .row
+                .col-12.col-md-6.profile-body__salary-item
+                  h4.h4 Salary rate
+                  .tech-text-s Salary (hourly) rate if request till appointment
+                .col-12.col-md-6.profile-body__salary-item
+                  .h3 $60
+                  .body-s per hour
+            //END   salary
+
+            //BEGIN schedule
+            .profile-body__schedule
+              .profile-body__schedule-header
+                h4.h4 Available working days and time
+              .profile-body__schedule-list
+                //BEGIN day
+                .profile-body__schedule-day
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Mon
+                    .profile-body__schedule-day-item-td
+                      .body-s 8:30 AM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 2:00 PM
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-td
+                      .body-s 6:30 PM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 8:00 PM
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Tue
+                    .profile-body__schedule-day-item-td
+                      .body-s 8:30 AM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 2:00 PM
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Wed
+                    .profile-body__schedule-day-item-td
+                      .body-s 6:30 PM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 8:00 PM
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Thu
+                    .profile-body__schedule-day-item-td
+                      .body-s 8:30 AM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 2:00 PM
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-td
+                      .body-s 8:30 AM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 2:00 PM
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Fri
+                    .profile-body__schedule-day-item-td
+                      .body-s 9:00 AM
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 10:30 AM
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day.profile-body__schedule-day--closed
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Sat
+                    .profile-body__schedule-day-item-td
+                      .body-s 0:00
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 0:00
+                //END   day
+                //BEGIN day
+                .profile-body__schedule-day.profile-body__schedule-day--closed
+                  .profile-body__schedule-day-item
+                    .profile-body__schedule-day-item-th
+                      .cta Sun
+                    .profile-body__schedule-day-item-td
+                      .body-s 0:00
+                      .profile-body__schedule-arr
+                        +svg('arr')
+                      .body-s 0:00
+                //END   day
+            //END   schedule
+          //END   profile-body
+      //END   profile
+
+    //end content
+    include ../sections/bottom-sections-wrap

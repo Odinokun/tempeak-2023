@@ -1,0 +1,27 @@
+.job-form {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.job-form__item {
+  margin-bottom: 10px;
+
+  @include min(576) {
+    margin-bottom: 20px;
+  }
+
+  .h4 {
+    margin-bottom: 20px;
+  }
+
+  .input,
+  .textarea,
+  .select,
+  .switch {
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}

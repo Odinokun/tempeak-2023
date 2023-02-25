@@ -1,0 +1,206 @@
+extends ../_template
+
+block variables
+  - let title       = '07.12 Edit job BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            a(href="#").page-top__back-link
+              .page-top__back-link-btn
+                +svg('slider-arr')
+              span.cta.page-top__back-link-text Back to jobs page
+            h1.h1.page-top__title Edit job
+      //END   page-top
+
+      //BEGIN job-form
+      form.job-form
+        //BEGIN item
+        .job-form__item
+          .container
+            .row
+              .col-12
+                h4.h4 Specialization
+            .row
+              .col-12.col-md-6.col-lg-4
+                .select
+                  select
+                    option(value="Clinical Staff") Clinical Staff
+                    option(value="Alabama") Alabama
+                    option(value="Nebraska") Nebraska
+                    option(value="Virginia") Virginia
+                    option(value="New Hampshire") New Hampshire
+                    option(value="Massachusetts") Massachusetts
+                    option(value="Rhode Island") Rhode Island
+                    option(value="Connecticut") Connecticut
+                    option(value="New York") New York
+                    option(value="New Jersey") New Jersey
+                    option(value="Pennsylvania") Pennsylvania
+                    option(value="Delaware") Delaware
+                    option(value="Maryland") Maryland
+                    option(value="North Carolina") North Carolina
+                    option(value="South Carolina") South Carolina
+                    option(value="Utah") Utah
+                  span.select__placeholder Clinical Staff
+                  span.select__error Some error text
+              .col-12.col-md-6.col-lg-4
+                .select
+                  select
+                    option(value="State") Specialty
+                    option(value="Alabama") Alabama
+                    option(value="Nebraska") Nebraska
+                    option(value="Virginia") Virginia
+                    option(value="New Hampshire") New Hampshire
+                    option(value="Massachusetts") Massachusetts
+                    option(value="Rhode Island") Rhode Island
+                    option(value="Connecticut") Connecticut
+                    option(value="New York") New York
+                    option(value="New Jersey") New Jersey
+                    option(value="Pennsylvania") Pennsylvania
+                    option(value="Delaware") Delaware
+                    option(value="Maryland") Maryland
+                    option(value="North Carolina") North Carolina
+                    option(value="South Carolina") South Carolina
+                    option(value="Utah") Utah
+                  span.select__placeholder Specialty
+                  span.select__error Some error text
+        //END   item
+
+        //BEGIN item
+        .job-form__item
+          .container
+            .row
+              .col-12
+                h4.h4 Time and salary
+            .row
+              .col-12.col-md-6.col-lg-4
+                .input.calendar-input
+                  input(placeholder='Date and time')
+                  span.input__placeholder Date and time
+                  span.input__error Some error text
+              .col-12.col-md-6.col-lg-4
+                .input
+                  input(placeholder='Salary per hour')
+                  span.input__placeholder Salary per hour
+                  span.input__error Some error text
+        //END   item
+
+        //BEGIN item
+        .job-form__item
+          .container
+            .row
+              .col-12
+                h4.h4 Address
+            .row
+              .col-12
+                .switch
+                  input(type="checkbox")
+                  .switch__body
+                  .switch__text.cta Use same address from account
+            .row
+              .col-12.col-md-6.col-lg-4
+                .select
+                  select
+                    option(value="State") State
+                    option(value="Alabama") Alabama
+                    option(value="Nebraska") Nebraska
+                    option(value="Virginia") Virginia
+                    option(value="New Hampshire") New Hampshire
+                    option(value="Massachusetts") Massachusetts
+                    option(value="Rhode Island") Rhode Island
+                    option(value="Connecticut") Connecticut
+                    option(value="New York") New York
+                    option(value="New Jersey") New Jersey
+                    option(value="Pennsylvania") Pennsylvania
+                    option(value="Delaware") Delaware
+                    option(value="Maryland") Maryland
+                    option(value="North Carolina") North Carolina
+                    option(value="South Carolina") South Carolina
+                    option(value="Utah") Utah
+                  span.select__placeholder State
+                  span.select__error Some error text
+              .col-12.col-md-6.col-lg-4
+                .select
+                  select
+                    option(value="City") City
+                    option(value="Alabama") Alabama
+                    option(value="Nebraska") Nebraska
+                    option(value="Virginia") Virginia
+                    option(value="New Hampshire") New Hampshire
+                    option(value="Massachusetts") Massachusetts
+                    option(value="Rhode Island") Rhode Island
+                    option(value="Connecticut") Connecticut
+                    option(value="New York") New York
+                    option(value="New Jersey") New Jersey
+                    option(value="Pennsylvania") Pennsylvania
+                    option(value="Delaware") Delaware
+                    option(value="Maryland") Maryland
+                    option(value="North Carolina") North Carolina
+                    option(value="South Carolina") South Carolina
+                    option(value="Utah") Utah
+                  span.select__placeholder City
+                  span.select__error Some error text
+            .row
+              .col-12.col-lg-8
+                .input
+                  input(placeholder='Address')
+                  span.input__placeholder Address
+                  span.input__error Some error text
+            .row
+              .col-12.col-md-6.col-lg-4
+                .input
+                  input(placeholder='Phone')
+                  span.input__placeholder Phone
+                  span.input__error Some error text
+              .col-12.col-md-6.col-lg-4
+                .input
+                  input(placeholder='ZIP')
+                  span.input__placeholder ZIP
+                  span.input__error Some error text
+        //END   item
+
+        //BEGIN item
+        .job-form__item
+          .container
+            .row
+              .col-12
+                h4.h4 Other
+            .row
+              .col-12.col-md-6.col-lg-4
+                .input.calendar-time-input
+                  input(placeholder='Lunchtime')
+                  span.input__placeholder Lunchtime
+                  span.input__error Some error text
+              .col-12.col-md-6.col-lg-4
+                .input
+                  input(placeholder='Patients per hour')
+                  span.input__placeholder Patients per hour
+                  span.input__error Some error text
+        //END   item
+
+        //BEGIN item
+        .job-form__item
+          .container
+            .row
+              .col-12.col-md-6.col-lg-4
+                button.btn.btn--white-and-black.direct-form__btn
+                  span Close
+              .col-12.col-md-6.col-lg-4
+                button.btn.btn--gradient.direct-form__btn
+                  span Add job
+        //END   item
+      //END   job-form
+
+    //end content
+    include ../sections/bottom-sections-wrap

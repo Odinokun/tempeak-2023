@@ -19,6 +19,8 @@ $(function() {
   require('./modules/banner')();
   require('./modules/calendar')();
 
+  // require('./modules/input-type-file')();
+
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();
   // require('./modules/scroll2anchor')();

@@ -1,0 +1,299 @@
+.profile {
+  padding-bottom: 80px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include min(768) {
+      align-items: flex-start;
+    }
+    @include min(992) {
+      flex-direction: row;
+    }
+  }
+}
+
+/* begin profile-card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: none;
+  width: 100%;
+  max-width: 400px;
+  margin-top: -120px;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 48px rgba(8, 28, 34, .04);
+
+  @include min(768) {
+    width: 320px;
+    margin-top: -170px;
+  }
+}
+
+.profile-card__ava {
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  background-image: url('../img/bg-profile-ava.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.profile-card__title {
+  margin-bottom: 10px;
+}
+
+.profile-card__position {
+  margin-bottom: 20px;
+}
+
+.profile-card__experience {
+  margin-bottom: 40px;
+}
+
+.person-row__rating {
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.profile-card__download-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 10px;
+  padding: 0 45px;
+  transition: .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px !important;
+  background-color: #fff;
+
+  &:hover {
+    border-color: $brand;
+
+    .profile-card__download-link-icon svg {
+      fill: $brand;
+    }
+
+    .profile-card__download-link-text {
+      color: $brand;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile-card__download-link-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+
+  svg {
+    fill: #6b6b6b;
+    width: 20px;
+    height: 20px;
+    transition: .5s;
+  }
+}
+
+.profile-card__download-link-text {
+  transition: .5s;
+  color: #242424;
+}
+
+/* end   profile-card */
+
+/* begin body */
+.profile-body {
+  width: 100%;
+
+  @include min(992) {
+    width: calc(100% - 320px);
+    padding-left: 30px;
+  }
+  @include min(1200) {
+    padding-left: 85px;
+  }
+}
+
+/* end   body */
+
+/* begin info */
+.profile-body__info {
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+
+  .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+}
+
+.profile-body__info-item {
+  &:first-child {
+    padding-bottom: 8px;
+
+    @include min(768) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* end   info */
+
+/* begin salary */
+.profile-body__salary {
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+  @include min(1200) {
+    padding: 40px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.profile-body__salary-item {
+  &:last-child {
+    display: flex;
+    align-items: baseline;
+
+    .h3 {
+      padding-right: 8px;
+    }
+  }
+}
+
+/* end   salary */
+
+/* begin schedule */
+.profile-body__schedule {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+  @include min(1200) {
+    padding: 40px;
+  }
+}
+
+.profile-body__schedule-header {
+  padding-bottom: 10px;
+
+  @include min(992) {
+    padding-bottom: 20px;
+  }
+}
+
+.profile-body__schedule-list {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.profile-body__schedule-day {
+  flex: none;
+  width: 90px;
+  margin-right: 10px;
+  user-select: none;
+  background: #fff;
+
+  @include min(768) {
+    flex: auto;
+    width: calc(100% / 7);
+    margin-right: 6px;
+  }
+  @include min(1200) {
+    margin-right: 16px;
+  }
+
+  &--closed {
+    pointer-events: none;
+    opacity: .4;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.profile-body__schedule-day-item {
+  margin-bottom: 4px;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px;
+}
+
+.profile-body__schedule-day-item-th {
+  padding: 12px 3px;
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.profile-body__schedule-day-item-td {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 1px;
+}
+
+.profile-body__schedule-arr {
+  padding: 6px 0;
+
+  svg {
+    fill: #6b6b6b;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* end   schedule */

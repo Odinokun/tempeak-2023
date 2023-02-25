@@ -1,25 +1,33 @@
 .page-top {
-  padding-bottom: 30px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 
   .row {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 250px;
+    padding-top: 80px;
+    padding-bottom: 30px;
   }
 }
 
-.page-top--no-reg {
-  background-image: url('../img/bg-top-page-pink.jpg');
+.page-top--co {
+  background-image: url('../img/bg-top-page-co.jpg');
+}
+
+.page-top--bo {
+  background-image: url('../img/bg-top-page-bo.jpg');
 }
 
 .page-top__back-link {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
-  transform: translateY(-150%);
+  width: auto;
+  margin-bottom: 20px;
   text-decoration: none;
 }
 
@@ -48,4 +56,31 @@
 
 .page-top__subtitle {
   margin-bottom: 0;
+}
+
+.page-top__verified {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: auto;
+
+  @include min(768) {
+    top: auto;
+    bottom: 40px;
+  }
+
+  .person-row__verified-info-tooltip {
+    top: calc(100% + 10px);
+    right: -7px;
+    bottom: auto;
+    left: auto;
+    transform: translateX(0);
+
+    &::before {
+      top: -10px;
+      right: 10px;
+      left: auto;
+      transform: rotate(180deg);
+    }
+  }
 }
