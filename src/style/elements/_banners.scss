@@ -6,7 +6,6 @@
   width: calc(100% - 20px);
   padding: 30px 10px;
   border-radius: 12px;
-  background: rgba(233, 255, 238, .85);
 
   backdrop-filter: blur(10px);
   @include min(768) {
@@ -45,4 +44,26 @@
 
 .banner__descr {
   text-align: center;
+}
+
+.delete-yes-banner {
+  background: rgba(233, 255, 238, .85);
+}
+
+.cancel-warning-banner {
+  background: rgba(255, 224, 224, .85);
+}
+
+.banner__btns {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+  .btn {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
