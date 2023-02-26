@@ -18,8 +18,7 @@ $(function() {
   require('./modules/rating-scale')();
   require('./modules/banner')();
   require('./modules/calendar')();
-
-  // require('./modules/input-type-file')();
+  require('./modules/input-type-file')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();

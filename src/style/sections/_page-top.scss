@@ -9,9 +9,13 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    min-height: 250px;
+    min-height: 180px;
     padding-top: 80px;
     padding-bottom: 30px;
+
+    @include min(768) {
+      min-height: 250px;
+    }
   }
 }
 

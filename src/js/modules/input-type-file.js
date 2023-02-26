@@ -21,7 +21,7 @@ module.exports = function () {
   })
 
   //clear
-  $('download__clear-btn').on('click', function () {
+  $('.download__clear-btn').on('click', function () {
     const wrap = $(this).parents('.download');
     const fileName = $(wrap).find('.download__input-filename');
     const inputFile = $(wrap).find('input');

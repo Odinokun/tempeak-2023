@@ -1,0 +1,202 @@
+.edit-profile {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  .input,
+  .select {
+    margin-bottom: 20px;
+  }
+}
+
+/* begin LEFT */
+.edit-profile__card-ava {
+  position: relative;
+  overflow: hidden;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+
+.edit-profile__card-ava-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-color: rgba(0, 0, 0, .2);
+  }
+}
+
+.edit-profile__card-ava-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  pointer-events: none;
+
+  .cta {
+    margin-bottom: 10px;
+  }
+
+  .cta,
+  .tech-text-s {
+    color: #e9e9e9;
+  }
+}
+
+.edit-profile__card-ava-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #e9e9e9;
+}
+
+.edit-profile__card-ava-input {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  opacity: 0;
+}
+
+.edit-profile__card-ava-del {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(233, 233, 233, .85);
+
+  backdrop-filter: blur(10px);
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* end   LEFT */
+
+/* begin BODY */
+.edit-profile__body-item {
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.edit-profile__working-days-subtitle {
+  margin-bottom: 15px;
+}
+
+.edit-profile__input-del {
+  width: 20px;
+  height: 20px;
+  margin: 20px auto;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      fill: $brand;
+    }
+  }
+
+  svg {
+    fill: #3d3d3d;
+    width: 20px;
+    height: 20px;
+    transition: .5s;
+  }
+}
+
+.edit-profile__add-working-day {
+  cursor: pointer;
+  color: $brand;
+}
+
+.edit-profile__select-time {
+  padding: 0;
+}
+
+.edit-profile__salary {
+  padding: 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(576) {
+    padding: 40px;
+  }
+}
+
+.edit-profile__salary-title {
+  margin-bottom: 40px;
+}
+
+.edit-profile__footer {
+  padding-top: 40px;
+
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .col-12:first-child {
+    order: 10;
+
+    @include min(992) {
+      order: initial;
+    }
+  }
+}
+
+.edit-profile__footer-del {
+  justify-content: flex-start;
+  padding-left: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+/* end   BODY */
