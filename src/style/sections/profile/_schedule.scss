@@ -1,0 +1,84 @@
+.profile-body__schedule {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+  @include min(1200) {
+    padding: 40px;
+  }
+}
+
+.profile-body__schedule-header {
+  padding-bottom: 10px;
+
+  @include min(992) {
+    padding-bottom: 20px;
+  }
+}
+
+.profile-body__schedule-list {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.profile-body__schedule-day {
+  flex: none;
+  width: 90px;
+  margin-right: 10px;
+  user-select: none;
+  background: #fff;
+
+  @include min(768) {
+    flex: auto;
+    width: calc(100% / 7);
+    margin-right: 6px;
+  }
+  @include min(1200) {
+    margin-right: 16px;
+  }
+
+  &--closed {
+    pointer-events: none;
+    opacity: .4;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.profile-body__schedule-day-item {
+  margin-bottom: 4px;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px;
+}
+
+.profile-body__schedule-day-item-th {
+  padding: 12px 3px;
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.profile-body__schedule-day-item-td {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 1px;
+}
+
+.profile-body__schedule-arr {
+  padding: 6px 0;
+
+  svg {
+    fill: #6b6b6b;
+    width: 8px;
+    height: 8px;
+  }
+}

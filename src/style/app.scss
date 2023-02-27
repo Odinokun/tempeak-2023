@@ -26,6 +26,7 @@
 @import 'elements/search-contractor';
 @import 'elements/ad-banner';
 @import 'elements/download';
+@import 'elements/status-btns';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 
@@ -45,6 +46,13 @@
 @import 'sections/about-circle';
 @import 'sections/about-estimate';
 @import 'sections/about-we-do';
+
+@import 'sections/profile/banners';
+@import 'sections/profile/info';
+@import 'sections/profile/messages';
+@import 'sections/profile/salary';
+@import 'sections/profile/schedule';
+@import 'sections/profile/profile-review';
 
 @import 'sections/faq';
 @import 'sections/page-top';

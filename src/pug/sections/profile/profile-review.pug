@@ -1,0 +1,25 @@
+//BEGIN profile-review
+.profile-review
+  .profile-review__header
+    h3.h3 What you say about work with Baltimore Dental Group?
+  form.profile-review__form
+    .profile-review__form-header
+      h4.h4 Please rate Baltimore Dental Group
+      .profile-review__rating
+        .cta Rate:
+        .profile-review__rating-scale
+          .profile-review__rating-scale-bg
+          input.profile-review__rating-scale-input( value="1" type="radio" name="rating-scale")
+          input.profile-review__rating-scale-input( value="2" type="radio" name="rating-scale")
+          input.profile-review__rating-scale-input( value="3" type="radio" name="rating-scale")
+          input.profile-review__rating-scale-input( value="4" type="radio" name="rating-scale")
+          input.profile-review__rating-scale-input( value="5" type="radio" name="rating-scale")
+
+
+    .textarea
+      textarea(placeholder='Add a comment…')
+      span.input__placeholder Add a comment…
+      span.input__error Some error text
+    button.btn.btn--gradient
+      span Send
+//END   profile-review

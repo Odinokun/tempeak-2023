@@ -1,0 +1,39 @@
+.status-btn {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px !important;
+
+  svg {
+    flex: none;
+    fill: #000;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.status-btn--waiting {
+  background-color: #e6faff;
+}
+
+.status-btn--accepting {
+  background-color: #e9ffee;
+}
+
+.status-btn--completed {
+  background-color: #a1f2c0;
+}
+
+.status-btn--canceled {
+  background-color: #f39d9d;
+}
+
+.status-btn--declined {
+  background-color: #e9e9e9;
+}

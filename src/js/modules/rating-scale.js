@@ -16,4 +16,13 @@ module.exports = function () {
     scale.style.width = scaleWidth + '%'
   }
 
+
+  $(".profile-review__rating-scale-input").on('click', function () {
+    const rating = this.value * 20;
+    const parentWrap = $(this).parent('.profile-review__rating-scale');
+    const scale = $(parentWrap).find('.profile-review__rating-scale-bg');
+
+    $(scale).css('width', rating + "%");
+  })
+
 };

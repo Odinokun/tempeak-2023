@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - let title       = '06.1 Profile CO / Tempeak'
+  - let title       = '08.7 Profile BO request in waiting status / Tempeak'
   - let description = 'TemPeak'
 
   - let breadcrumbs     = 'TemPeak breadcrumbs'
@@ -37,10 +37,10 @@ block content
           //BEGIN profile-card
           .profile-card
             .profile-card__ava
-              img(src="assets/img/profile-ava.jpg" alt="avatar")
-            h3.h3.profile-card__title George Smith
-            .cta.profile-card__position RDA General dentist
-            .body-s.profile-card__experience 5-10 years of experience
+              img(src="assets/img/profile-bo-ava.jpg" alt="avatar")
+            h3.h3.profile-card__title Baltimore Dental Group
+            .cta.profile-card__position Darrell Steward
+            a(href="#").body-s.profile-card__experience baltimoredentalgroup.com
             .profile-card__rating
               //BEGIN rating
               .person-row__rating
@@ -52,22 +52,31 @@ block content
                     strong 4.8
                     a(href='#') (75)
               //END   rating
-            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
-              .profile-card__download-link-icon
-                +svg('file')
-              .profile-card__download-link-text.cta Download Resume
-            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
-              .profile-card__download-link-icon
-                +svg('file')
-              .profile-card__download-link-text.cta Download License
+
+            .profile-card__status
+              include ../elements/status/status-waiting
+              include ../elements/status/status-declined
+              .profile-card__status-info
+                +svg('clock')
+                .tech-text-s Time of request: 11 October 2022 03:30 PM
+            .profile-card__last-visit.profile-card__last-visit--bo.tech-caps-text Was online 2 hours ago
           //END   profile-card
 
           //BEGIN profile-body
           .profile-body
-            include ../sections/profile/info
-            include ../sections/profile/salary
-            include ../sections/profile/schedule
+            include ../sections/profile/text
+            include ../sections/profile/info-sm
+            include ../sections/profile/schedule-sm
 
+            //BEGIN profile-body__messages
+            .profile-body__messages
+              h3.h3.messages-title Messages
+              .messages
+                include ../sections/profile/message-top
+                include ../sections/profile/message
+                include ../sections/profile/message-form
+              include ../sections/profile/message-form
+            //END   profile-body__messages
           //END   profile-body
       //END   profile
 

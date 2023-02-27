@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - let title       = '06.1 Profile CO / Tempeak'
+  - let title       = '08.3 Profile CO request in complete status / Tempeak'
   - let description = 'TemPeak'
 
   - let breadcrumbs     = 'TemPeak breadcrumbs'
@@ -14,7 +14,7 @@ block content
     //begin content
     main.main
       //BEGIN page-top
-      .page-top.page-top--co
+      .page-top.page-top--bo
         .container
           .row
             .page-top__verified
@@ -52,6 +52,15 @@ block content
                     strong 4.8
                     a(href='#') (75)
               //END   rating
+
+            .profile-card__status
+              include ../elements/status/status-completed
+              button.btn.btn--white-and-black
+                span Leave your review
+              .profile-card__status-info
+                +svg('clock')
+                .tech-text-s Time of request: 11 October 2022 03:30 PM
+
             a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
               .profile-card__download-link-icon
                 +svg('file')
@@ -60,6 +69,8 @@ block content
               .profile-card__download-link-icon
                 +svg('file')
               .profile-card__download-link-text.cta Download License
+
+            .profile-card__last-visit.tech-caps-text Was online 2 hours ago
           //END   profile-card
 
           //BEGIN profile-body
@@ -68,6 +79,14 @@ block content
             include ../sections/profile/salary
             include ../sections/profile/schedule
 
+            //BEGIN profile-body__messages
+            .profile-body__messages
+              h3.h3.messages-title Messages
+              .messages
+                include ../sections/profile/message-top
+            //END   profile-body__messages
+
+            include ../sections/profile/profile-review
           //END   profile-body
       //END   profile
 

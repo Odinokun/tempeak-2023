@@ -1,0 +1,29 @@
+.profile-body__salary {
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+  @include min(1200) {
+    padding: 40px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.profile-body__salary-item {
+  &:last-child {
+    display: flex;
+    align-items: baseline;
+
+    .h3 {
+      padding-right: 8px;
+    }
+  }
+}
