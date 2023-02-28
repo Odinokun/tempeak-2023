@@ -19,6 +19,7 @@ $(function() {
   require('./modules/banner')();
   require('./modules/calendar')();
   require('./modules/input-type-file')();
+  require('./modules/subscription')();
 
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();

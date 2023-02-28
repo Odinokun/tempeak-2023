@@ -34,33 +34,36 @@ block content
       //BEGIN profile
       .profile
         .container
-          //BEGIN profile-card
-          .profile-card
-            .profile-card__ava
-              //-img(src="assets/img/profile-ava.jpg" alt="avatar")
-            h3.h3.profile-card__title George Smith
-            .cta.profile-card__position RDA General dentist
-            .body-s.profile-card__experience 5-10 years of experience
-            .profile-card__rating
-              //BEGIN rating
-              .person-row__rating
-                .person-row__rating-text.cta Rate:
-                .rating(data-rating="4.8")
-                  .rating__scale
-                    .rating__scale-bg
-                  .rating__text.cta
-                    strong 4.8
-                    a(href='#') (75)
-              //END   rating
-            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
-              .profile-card__download-link-icon
-                +svg('file')
-              .profile-card__download-link-text.cta Download Resume
-            a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
-              .profile-card__download-link-icon
-                +svg('file')
-              .profile-card__download-link-text.cta Download License
-          //END   profile-card
+          //BEGIN profile__left
+          .profile__left
+            //BEGIN profile-card
+            .profile-card
+              .profile-card__ava
+                //-img(src="assets/img/profile-ava.jpg" alt="avatar")
+              h3.h3.profile-card__title George Smith
+              .cta.profile-card__position RDA General dentist
+              .body-s.profile-card__experience 5-10 years of experience
+              .profile-card__rating
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+                .profile-card__download-link-icon
+                  +svg('file')
+                .profile-card__download-link-text.cta Download Resume
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+                .profile-card__download-link-icon
+                  +svg('file')
+                .profile-card__download-link-text.cta Download License
+            //END   profile-card
+          //END   profile__left
 
           //BEGIN profile-body
           .profile-body

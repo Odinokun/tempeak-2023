@@ -1,0 +1,225 @@
+extends ../_template
+
+block variables
+  - let title       = '07.8 Edit proflie BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin selectDay()
+  .select
+    select
+      option(value="Day") Day
+      option(value="Monday") Monday
+      option(value="Tuesday") Tuesday
+      option(value="Wednesday") Wednesday
+      option(value="Thursday") Thursday
+      option(value="Friday") Friday
+      option(value="Saturday") Saturday
+      option(value="Sunday") Sunday
+    span.select__placeholder Day
+    span.select__error Some error text
+
+mixin inputMix(place)
+  .input
+    input(placeholder='' + place)
+    span.input__placeholder #{place}
+    span.input__error Some error text
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            a(href="#").page-top__back-link
+              .page-top__back-link-btn
+                +svg('slider-arr')
+              span.cta.page-top__back-link-text Back
+            h1.h1.page-top__title Profile
+      //END   page-top
+
+      //BEGIN edit-profile
+      form.edit-profile
+        .container
+          .row
+            //BEGIN card
+            .edit-profile__card.col-12.col-md-4.col-xl-3
+              h4.h4 Photo and documents
+              //BEGIN ava
+              .edit-profile__card-ava
+                img(src="assets/img/person-no-ava.jpg" alt="no ava")
+                .edit-profile__card-ava-bg(style="background-image:url('assets/img/business-no-logo.jpg')")
+                .edit-profile__card-ava-text
+                  .cta Upload your photo
+                  .tech-text-s (jpg, jpeg, png, gif)<br>maximal size must be less than 2 MB
+                .tech-text-s.edit-profile__card-ava-footer If the photo is not loaded, a stub is displayed.
+                input(type="file").edit-profile__card-ava-input
+                .edit-profile__card-ava-del
+                  +svg('trash')
+              //END   ava
+            //END   card
+
+            //BEGIN body
+            .edit-profile__body.col-12.col-lg-8.ms-auto
+              //BEGIN personal
+              .row
+                h4.h4 Personal information
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    +inputMix('Business name')
+                  .col-12.col-lg-6
+                    +inputMix('Website or Social links')
+                  .col-12.col-lg-6
+                    +inputMix('Tax ID')
+                  .col-12.col-lg-6
+                    +inputMix('Contact person')
+                  .col-12.col-lg-6
+                    +inputMix('Email')
+                  .col-12.col-lg-6
+                    +inputMix('Phone')
+                  .col-12
+                    .textarea
+                      textarea(placeholder='Add text message (optional)')
+                      span.input__placeholder Add text message (optional)
+                      span.input__error Some error text
+              //END   personal
+
+              //BEGIN address
+              .row
+                h4.h4 Address
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="State") State
+                        option(value="Alabama") Alabama
+                        option(value="Nebraska") Nebraska
+                        option(value="Virginia") Virginia
+                        option(value="New Hampshire") New Hampshire
+                        option(value="Massachusetts") Massachusetts
+                        option(value="Rhode Island") Rhode Island
+                        option(value="Connecticut") Connecticut
+                        option(value="New York") New York
+                        option(value="New Jersey") New Jersey
+                        option(value="Pennsylvania") Pennsylvania
+                        option(value="Delaware") Delaware
+                        option(value="Maryland") Maryland
+                        option(value="North Carolina") North Carolina
+                        option(value="South Carolina") South Carolina
+                        option(value="Utah") Utah
+                      span.select__placeholder State
+                      span.select__error Some error text
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="State") City
+                        option(value="Alabama") Alabama
+                        option(value="Nebraska") Nebraska
+                        option(value="Virginia") Virginia
+                        option(value="New Hampshire") New Hampshire
+                        option(value="Massachusetts") Massachusetts
+                        option(value="Rhode Island") Rhode Island
+                        option(value="Connecticut") Connecticut
+                        option(value="New York") New York
+                        option(value="New Jersey") New Jersey
+                        option(value="Pennsylvania") Pennsylvania
+                        option(value="Delaware") Delaware
+                        option(value="Maryland") Maryland
+                        option(value="North Carolina") North Carolina
+                        option(value="South Carolina") South Carolina
+                        option(value="Utah") Utah
+                      span.select__placeholder City
+                      span.select__error Some error text
+                  .col-12.col-lg-6
+                    +inputMix('Address')
+                  .col-12.col-lg-6
+                    +inputMix('ZIP')
+              //END   address
+
+              //BEGIN working days
+              .row
+                h4.h4 Working days
+                .edit-profile__working-days-subtitle.tech-text-s Attention! The working hours there should also be a choice of the time of day according to the American model: AM and PM
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    +selectDay
+                  .col-12.col-lg-6.edit-profile__select-time
+                    .row
+                      .col-5
+                        +inputMix('From')
+                      .col-5
+                        +inputMix('To')
+                      .col-2
+                        .edit-profile__input-del
+                          +svg('trash')
+                .row
+                  .col-12.col-lg-6
+                    +selectDay
+                  .col-12.col-lg-6.edit-profile__select-time
+                    .row
+                      .col-5
+                        +inputMix('From')
+                      .col-5
+                        +inputMix('To')
+                      .col-2
+                        .edit-profile__input-del
+                          +svg('trash')
+                .row
+                  .tech-text-link.edit-profile__add-working-day Add one more
+              //END   working days
+
+              //BEGIN salary
+              .edit-profile__salary
+                .row
+                  h4.h4.edit-profile__salary-title Pick Subscription
+                  //BEGIN subscribe-item
+                  .subscribe-item.col-12
+                    //BEGIN radio
+                    .subscribe-item__radio-wrap
+                      .subscribe-item__radio.radio
+                        input(type="radio" name="subscribe" checked='true')
+                        span
+                      .subscribe-item__radio-text.cta Monthly
+                    //END   radio
+                    .subscribe-item__period
+                      .subscribe-item__period-days.tech-text-s per month
+                      .subscribe-item__period-price.h4 $99.00
+                  //END   subscribe-item
+
+                  //BEGIN promo
+                  .subscribe-promo.col-12
+                    .body-m.subscribe-promo__text If you have Promo Code type it here:
+                    .subscribe-promo__input-wrap
+                      input(placeholder='Promo Code')
+                      button.btn.btn--gradient.subscribe-promo__btn
+                        span Apply
+                  //END   promo
+              //END   salary
+
+              //BEGIN footer
+              .edit-profile__footer
+                .row
+                  .col-12.col-lg-4
+                    a(href="#").btn.edit-profile__footer-del
+                      +svg('trash')
+                      span Delete profile
+                  .col-6.col-lg-4
+                    a(href="#").btn.btn--white-and-black
+                      span Cancel
+                  .col-6.col-lg-4
+                    a(href="#").btn.btn--gradient
+                      span Save
+              //END   footer
+            //END   body
+      //END   edit-profile
+    //end content
+    include ../sections/bottom-sections-wrap

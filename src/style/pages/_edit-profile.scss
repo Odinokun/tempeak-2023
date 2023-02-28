@@ -158,17 +158,24 @@
 }
 
 .edit-profile__salary {
-  padding: 20px;
+  padding: 20px 10px;
   border: 1px solid #e9e9e9;
   border-radius: 12px;
 
+  @include min(375) {
+    padding: 20px;
+  }
   @include min(576) {
     padding: 40px;
   }
 }
 
 .edit-profile__salary-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
+  @include min(768) {
+    margin-bottom: 40px;
+  }
 }
 
 .edit-profile__footer {
@@ -200,3 +207,117 @@
 }
 
 /* end   BODY */
+
+/* begin subscribe */
+.subscribe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px;
+  background: #fff;
+
+  @include min(375) {
+    padding: 17px 13px;
+  }
+  @include min(768) {
+    padding: 20px;
+  }
+}
+
+.subscribe-item__radio-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-item__radio-text {
+  padding-left: 10px;
+
+  @include min(576) {
+    padding-left: 20px;
+  }
+}
+
+.subscribe-item__period {
+  display: flex;
+  align-items: baseline;
+}
+
+.subscribe-item__period-days {
+  padding-left: 10px;
+
+  @include min(576) {
+    padding-left: 20px;
+  }
+}
+
+.subscribe-item__period-price {
+  padding-left: 10px;
+
+  @include min(576) {
+    padding-left: 20px;
+  }
+}
+
+.subscribe-promo {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  @include min(1200) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.subscribe-promo__text {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-right: 20px;
+
+  @include min(1200) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.subscribe-promo__input-wrap {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  padding: 2px;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px;
+  background: #fff;
+
+  @include min(1200) {
+    width: 50%;
+  }
+
+  input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    width: 50%;
+    padding: 5px 10px;
+    color: #242424;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    @include min(576) {
+      padding: 5px 24px;
+    }
+    @include placeholder-color(#6b6b6b);
+  }
+}
+
+.subscribe-promo__btn {
+  width: 50%;
+  height: 52px;
+}
+
+/* end   subscribe */

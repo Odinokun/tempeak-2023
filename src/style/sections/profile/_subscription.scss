@@ -1,0 +1,64 @@
+.profile-body__subscription {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+  @include min(1200) {
+    padding: 40px;
+  }
+}
+
+.profile-body__subscription-link {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  color: $brand;
+
+  @include min(1200) {
+    top: 40px;
+    right: 40px;
+  }
+}
+
+.profile-body__subscription-row {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-top: 18px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.profile-body__subscription-row-scale {
+  width: 0;
+  height: 10px;
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, #f3fff6 0%, #e9ffee 100%);
+}
+
+.profile-body__subscription-row-label {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  margin-top: 10px;
+  transform: translateX(-50%);
+
+  &::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 10px;
+    content: '';
+    background-color: #000;
+  }
+}

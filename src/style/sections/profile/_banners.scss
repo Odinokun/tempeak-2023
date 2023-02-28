@@ -8,6 +8,13 @@
   @include min(992) {
     margin-bottom: 40px;
   }
+  .h4 {
+    margin-bottom: 5px;
+  }
+  .tech-text-link{
+    margin-top: 15px;
+    display: inline-block;
+  }
 }
 
 .profile-body__banner--warning {
