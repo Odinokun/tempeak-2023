@@ -1,0 +1,60 @@
+extends ../_template
+
+block variables
+  - let title       = '05.2'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            h1.h1.page-top__title Specials
+      //END   page-top
+
+      //BEGIN specials
+      .specials
+        .container
+          .row
+            .col-12.col-lg-6
+              //BEGIN special
+              .special
+                .special__img
+                  img(src="assets/img/special-01.jpg" alt="Tempeak")
+                .special__info
+                  h4.h4.special__title Get extra 25% sale on direct hire
+                  .body-m.special__text Get extra 25% sale on direct hire search only in January 2023. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                  .special__footer
+                    a(href="#").special__btn.double-btn
+                      span.cta More details
+                    .special__date
+                      +svg('clock')
+                      .tech-text-s 12 days to end of sale
+              //END   special
+            .col-12.col-lg-6
+              //BEGIN special
+              .special
+                .special__img
+                  img(src="assets/img/special-02.jpg" alt="Tempeak")
+                .special__info
+                  h4.h4.special__title 15% sale from our partner
+                  .body-m.special__text Get extra 25% sale on direct hire search only in January 2023. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                  .special__footer
+                    a(href="#").special__btn.double-btn
+                      span.cta More details
+                    .special__date
+                      +svg('clock')
+                      .tech-text-s 12 days to end of sale
+              //END   special
+      //END   specials
+    //end content
+    include ../elements/banners/delete-specials
+    include ../sections/bottom-sections-wrap
