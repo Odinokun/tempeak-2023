@@ -22,6 +22,9 @@
 }
 
 .person-row__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: calc(100% - 80px);
   padding: 30px 0;
 
@@ -229,3 +232,68 @@
 }
 
 /* end   date */
+
+/* begin time */
+.person-row__time-request {
+  display: flex;
+  align-items: center;
+  max-width: 70%;
+  margin-bottom: 0;
+  text-align: right;
+
+  @include min(768) {
+    justify-content: flex-end;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  svg {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+}
+
+/* end   time */
+
+/* begin messages */
+.person-row__messages {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 0;
+  text-align: right;
+
+  @include min(768) {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.person-row__messages-icon {
+  flex: none;
+  margin-right: 8px;
+
+  img,
+  svg {
+    display: block;
+    flex: none;
+    fill: #6b6b6b;
+    width: 16px;
+    height: 16px;
+
+    @include min(375) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+/* end   messages */

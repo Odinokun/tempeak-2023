@@ -1,0 +1,251 @@
+extends ../_template
+
+block variables
+  - let title       = '06.4 Requests CO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--co
+        .container
+          .row
+            h1.h1.page-top__title Requests
+            include ../elements/filter
+      //END   page-top
+
+      //BEGIN requests
+      .requests
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 10 Jan 2023
+
+        .container
+          .row
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/clinics/clinic-01.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title Baltimore Dental Group
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta Darrell Steward
+                  span.body-s Los Angeles CA
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+                a(href="#").double-btn
+                  span.cta More details
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-waiting
+                .person-row__messages
+                  .person-row__messages-icon
+                    img(src="assets/img/anim-gif/email.gif" alt="Tempeak")
+                  .person-row__messages-text
+                    .tech-text-s 1 new message
+
+              //END   right
+            //END   person-row
+
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/clinics/clinic-02.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title Happy Dental
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta Esther Howard
+                  span.body-s Los Angeles CA
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+                a(href="#").double-btn
+                  span.cta More details
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-accepting
+                .person-row__messages
+                  .person-row__messages-icon
+                    +svg('message')
+                  .person-row__messages-text
+                    .tech-text-s 1 new message
+
+              //END   right
+            //END   person-row
+
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 2 Jan 2023
+
+        .container
+          .row
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/clinics/clinic-01.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title Baltimore Dental Group
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta Darrell Steward
+                  span.body-s Los Angeles CA
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+                a(href="#").double-btn
+                  span.cta More details
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-completed
+              //END   right
+            //END   person-row
+
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/clinics/clinic-03.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title Dr. Mate
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta Darrell Steward
+                  span.body-s Los Angeles CA
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+                a(href="#").double-btn
+                  span.cta More details
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-declined
+              //END   right
+            //END   person-row
+
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/clinics/clinic-04.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title Hello tooth
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta Darrell Steward
+                  span.body-s Los Angeles CA
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+                a(href="#").double-btn
+                  span.cta More details
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-canceled
+              //END   right
+            //END   person-row
+
+      //END   requests
+    //end content
+    include ../sections/bottom-sections-wrap

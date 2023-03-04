@@ -1,0 +1,45 @@
+.requests {
+  padding-bottom: 100px;
+
+  .person-row__rating {
+    margin-bottom: 0;
+  }
+
+  .status-btn {
+    margin-bottom: 15px;
+
+    @include min(768) {
+      margin-bottom: 0;
+    }
+  }
+
+  .double-btn {
+    margin-top: 15px;
+  }
+
+
+  .person-row__right {
+    flex-direction: column-reverse;
+
+    @include min(768) {
+      flex-direction: column;
+      max-width: 295px;
+    }
+  }
+}
+
+.requests-bo__date {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.requests-bo__date-item {
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: rgba(233, 233, 233, .75);
+
+  backdrop-filter: blur(10px);
+}

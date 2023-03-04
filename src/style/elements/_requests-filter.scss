@@ -1,0 +1,53 @@
+/* begin FILTER */
+.requests-filter {
+  position: relative;
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: -20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+  @include min(768) {
+    padding-bottom: 10px;
+  }
+  @include min(992) {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.requests-filter__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.requests-filter__item {
+  padding-right: 16px;
+  cursor: pointer;
+  user-select: none;
+
+  @include min(992) {
+    padding-right: 0;
+    padding-left: 16px;
+  }
+
+  .cta {
+    color: #373737;
+  }
+
+  &.active {
+    .cta {
+      color: #242424;
+    }
+  }
+}
+
+/* end   FILTER */

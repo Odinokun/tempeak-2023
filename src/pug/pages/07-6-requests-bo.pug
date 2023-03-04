@@ -1,0 +1,201 @@
+extends ../_template
+
+block variables
+  - let title       = '07.6 Requests BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            h1.h1.page-top__title My requests
+            include ../elements/filter
+      //END   page-top
+
+      //BEGIN requests
+      .requests
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 10 Jan 2023
+        .container
+          .row
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/persons/person-01.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title George Smith
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta RDA
+                  span.cta General dentist
+                  span.body-s.person-row__doc-info-decor |
+                  span.body-s Los Angeles CA
+                  span.body-s 5-10 years of experience
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="5")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 5
+                      a(href='#') (75)
+                //END   rating
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-waiting
+              //END   right
+            //END   person-row
+
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/persons/person-02.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title George Smith
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta RDA
+                  span.cta General dentist
+                  span.body-s.person-row__doc-info-decor |
+                  span.body-s Los Angeles CA
+                  span.body-s 5-10 years of experience
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.75")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.75
+                      a(href='#') (102)
+                //END   rating
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-accepting
+              //END   right
+            //END   person-row
+
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/persons/person-03.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title George Smith
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta RDA
+                  span.cta General dentist
+                  span.body-s.person-row__doc-info-decor |
+                  span.body-s Los Angeles CA
+                  span.body-s 5-10 years of experience
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.85")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.85
+                      a(href='#') (42)
+                //END   rating
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-completed
+              //END   right
+            //END   person-row
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 2 Jan 2023
+        .container
+          .row
+            //BEGIN person-row
+            .person-row
+              //BEGIN left
+              .person-row__left
+                .person-row__ava
+                  img(src="assets/img/persons/person-04.jpg" alt="avatar")
+              //END   left
+
+              //BEGIN main
+              .person-row__main
+                h3.h3.person-row__title George Smith
+                //BEGIN info
+                .person-row__doc-info
+                  span.cta RDA
+                  span.cta General dentist
+                  span.body-s.person-row__doc-info-decor |
+                  span.body-s Los Angeles CA
+                  span.body-s 5-10 years of experience
+                //END   info
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.2")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.2
+                      a(href='#') (75)
+                //END   rating
+              //END   main
+
+              //BEGIN right
+              .person-row__right
+                .person-row__time-request
+                  +svg('clock')
+                  span.tech-text-s Time of request: 10:04 AM
+                include ../elements/status/status-declined
+              //END   right
+            //END   person-row
+      //END   requests
+
+    //end content
+    include ../sections/bottom-sections-wrap
