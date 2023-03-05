@@ -124,6 +124,7 @@
   }
 
   .ui-selectmenu-icon {
+    z-index: 1;
     background-image: url('../img/select-btn.svg');
     background-repeat: no-repeat;
     background-position: 50% 50%;

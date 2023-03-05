@@ -1,16 +1,54 @@
-//BEGIN requests-filter
-.requests-filter
-  ul.requests-filter__list
-    li.requests-filter__item.active
-      .cta All
-    li.requests-filter__item
-      .cta Waiting
-    li.requests-filter__item
-      .cta Accepted
-    li.requests-filter__item
-      .cta Completed
-    li.requests-filter__item
-      .cta Canceled
-    li.requests-filter__item
-      .cta Declined
-//END   requests-filter
+mixin select(selectValue)
+  .select
+    select
+      option(value="" + selectValue) #{selectValue}
+      option(value="Lorem 01") Lorem 01
+      option(value="Lorem 02") Lorem 02
+      option(value="Lorem 03") Lorem 03
+      option(value="Lorem 04") Lorem 04
+      option(value="Lorem 05") Lorem 05
+      option(value="Lorem 06") Lorem 06
+      option(value="Lorem 07") Lorem 07
+      option(value="Lorem 08") Lorem 08
+      option(value="Lorem 09") Lorem 09
+      option(value="Lorem 10") Lorem 10
+      option(value="Lorem 11") Lorem 11
+      option(value="Lorem 12") Lorem 12
+    //-span.select__placeholder #{selectValue}
+    span.select__error Some error text
+
+
+//BEGIN filter
+#filter.filter
+  //BEGIN filter-close-btn
+  #filter-close-btn.filter-close-btn
+    +svg('close')
+  //END   filter-close-btn
+  .container
+    .row
+      .filter__header
+        .filter__title
+          .h2 Filter
+          .filter__title-num 2
+      .filter__selects
+        +select('Clinical Staff')
+        +select('Specialty')
+        +select('Date')
+        +select('Status')
+      button.filter__reset
+        +svg('refresh')
+        .tech-text-link Reset to default
+//END   filter
+
+//BEGIN filter-mob
+.filter-mob
+  .container
+    .row
+      .col-12.col-md-6.ms-auto
+        .filter-mob-btn.btn.btn--gradient
+          .filter-mob-btn__text
+            .cta Filter
+            .filter-mob-btn__text-num 2
+          .filter-mob-btn__icon
+            +svg('filter')
+//END   filter-mob

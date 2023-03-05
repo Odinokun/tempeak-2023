@@ -1,6 +1,7 @@
 .clinic-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 450px;
   padding: 30px;
   border: 2px solid #e9e9e9;
@@ -91,12 +92,72 @@
 
 /* end   rating */
 
+/* begin time */
+.clinic-card__time {
+  margin-bottom: 15px;
+  border: 2px solid #e9e9e9;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.clinic-card__time-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+
+  &:first-child {
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  svg {
+    fill: #6b6b6b;
+    width: 100%;
+    height: 8px;
+  }
+
+  .body-s {
+    padding: 0 20px;
+    white-space: nowrap;
+    color: #000;
+  }
+}
+
+/* end   time */
+
+/* begin info-2 */
+.clinic-card__info-2 {
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.clinic-card__info-2-item {
+  display: flex;
+  margin-bottom: 10px;
+
+  span {
+    width: 50%;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+/* end   info-2 */
 
 /* begin info */
 .clinic-card__info {
   margin-top: auto;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #e9e9e9;
 }
 
@@ -111,7 +172,7 @@
     }
 
     &:last-child {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #3d3d3d;
     }
   }

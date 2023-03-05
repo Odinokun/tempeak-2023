@@ -28,7 +28,7 @@
 @import 'elements/download';
 @import 'elements/status-btns';
 @import 'elements/requests-filter';
-//@import 'elements/pagination';
+@import 'elements/filter';
 
 //section
 @import 'sections/popups';
@@ -88,3 +88,4 @@
 @import 'pages/edit-profile';
 @import 'pages/specials';
 @import 'pages/requests-bo';
+@import 'pages/jobs';
