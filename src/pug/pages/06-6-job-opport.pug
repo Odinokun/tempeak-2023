@@ -1,0 +1,163 @@
+extends ../_template
+
+block variables
+  - let title       = '07.9 My jobs BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin card(logo, title)
+  .col-12.col-md-6.col-lg-4.col-xl-3.jobs__item
+    //BEGIN clinic-card
+    .clinic-card
+      //BEGIN clinic-card__header
+      .clinic-card__header
+        .clinic-card__logo
+          img(src="assets/img/brands-logo/" + logo + ".svg" alt="logo")
+        .clinic-card__header-label.clinic-card__header-label--new
+          span new
+      //END   clinic-card__header
+
+      h4.clinic-card__title.h4 #{title}
+
+      //BEGIN rating
+      .clinic-card__rating
+        .clinic-card__rating-icon
+          +svg('star')
+        .clinic-card__rating-num 4.75
+        a(href="#").clinic-card__rating-link (48)
+      //END   rating
+
+      //BEGIN clinic-card__time
+      .clinic-card__time
+        .clinic-card__time-item
+          .cta 18 Jan 2023
+        .clinic-card__time-item
+          .body-s 8:30 AM
+          +svg('arr-right')
+          .body-s 2:00 PM
+      //END   clinic-card__time
+
+      //BEGIN clinic-card__info-2
+      .clinic-card__info-2
+        .clinic-card__info-2-item
+          span.tech-text-s Specialty:
+          span.cta General Dentist
+        .clinic-card__info-2-item
+          span.tech-text-s Salary (hourly):
+          span.cta $35
+      //END   clinic-card__info-2
+
+      //BEGIN clinic-card__info
+      .clinic-card__info
+        .clinic-card__info-item
+          span.tech-text-s Address:
+          span.body-m 200 N. Spring Street, Los Angeles CA 90012
+        .clinic-card__info-item
+          span.tech-text-s Phone:
+          span.body-m 800 806 1234
+        .clinic-card__info-item
+          span.tech-text-s Lunchtime:
+          span.body-m 1:00 PM - 2:00 PM
+      //END   clinic-card__info
+
+      //BEGIN clinic-card__footer
+      .clinic-card__footer
+        include ../elements/status/status-accepting
+      //END   clinic-card__footer
+
+      .clinic-card__time-and-date
+        .clinic-card__footer-date
+          .clinic-card__footer-date-icon
+            +svg('clock')
+          .clinic-card__footer-date-text.body-s 12:32 / 10 Jan 2023
+    //END   clinic-card
+
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--co
+        .container
+          .row
+            h1.h1.page-top__title Job opportunities
+            include ../elements/requests-filter
+      //END   page-top
+
+      //BEGIN jobs
+      .jobs
+        .container
+          .row
+            .col-12.col-md-6.col-lg-4.col-xl-3.jobs__item
+              //BEGIN clinic-card
+              .clinic-card
+                //BEGIN clinic-card__header
+                .clinic-card__header
+                  .clinic-card__logo
+                    img(src="assets/img/brands-logo/01.svg" alt="logo")
+                  .clinic-card__header-label.clinic-card__header-label--new
+                    span new
+                //END   clinic-card__header
+
+                h4.clinic-card__title.h4 Baltimore Dental Group
+
+                //BEGIN rating
+                .clinic-card__rating
+                  .clinic-card__rating-icon
+                    +svg('star')
+                  .clinic-card__rating-num 4.75
+                  a(href="#").clinic-card__rating-link (48)
+                //END   rating
+
+                //BEGIN clinic-card__time
+                .clinic-card__time
+                  .clinic-card__time-item
+                    .cta 18 Jan 2023
+                  .clinic-card__time-item
+                    .body-s 8:30 AM
+                    +svg('arr-right')
+                    .body-s 2:00 PM
+                //END   clinic-card__time
+
+                //BEGIN clinic-card__info-2
+                .clinic-card__info-2
+                  .clinic-card__info-2-item
+                    span.tech-text-s Specialty:
+                    span.cta General Dentist
+                  .clinic-card__info-2-item
+                    span.tech-text-s Salary (hourly):
+                    span.cta $35
+                //END   clinic-card__info-2
+
+                //BEGIN clinic-card__info
+                .clinic-card__info
+                  .clinic-card__info-item
+                    span.tech-text-s Address:
+                    span.body-m 200 N. Spring Street, Los Angeles CA 90012
+                  .clinic-card__info-item
+                    span.tech-text-s Lunchtime:
+                    span.body-m 1:00 PM - 2:00 PM
+                //END   clinic-card__info
+
+                //BEGIN clinic-card__footer
+                .clinic-card__footer
+                  include ../elements/status/status-waiting
+                //END   clinic-card__footer
+
+                .clinic-card__time-and-date
+                  .clinic-card__footer-date
+                    .clinic-card__footer-date-icon
+                      +svg('clock')
+                    .clinic-card__footer-date-text.body-s 12:32 / 10 Jan 2023
+              //END   clinic-card
+
+            +card('03', 'Moderna Dental')
+            +card('04', 'Dental W12')
+      //END   jobs
+    //end content
+    include ../sections/bottom-sections-wrap
