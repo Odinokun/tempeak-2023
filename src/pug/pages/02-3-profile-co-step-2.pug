@@ -1,0 +1,270 @@
+extends ../_template
+
+block variables
+  - let title       = '02.3 sign up step 2 CO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin selectDay()
+  .select
+    select
+      option(value="Day") Day
+      option(value="Monday") Monday
+      option(value="Tuesday") Tuesday
+      option(value="Wednesday") Wednesday
+      option(value="Thursday") Thursday
+      option(value="Friday") Friday
+      option(value="Saturday") Saturday
+      option(value="Sunday") Sunday
+    span.select__placeholder Day
+    span.select__error Some error text
+
+mixin inputMix(place)
+  .input
+    input(placeholder='' + place)
+    span.input__placeholder #{place}
+    span.input__error Some error text
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--co
+        .container
+          .row
+            h1.h1.page-top__title Profile
+      //END   page-top
+
+      //BEGIN edit-profile
+      form.edit-profile
+        .container
+          .row
+            //BEGIN card
+            .edit-profile__card.col-12.col-md-4.col-xl-3
+              h4.h4 Photo and documents
+              //BEGIN ava
+              .edit-profile__card-ava.edit-profile__card-ava--no-img
+                .edit-profile__card-ava-text
+                  .cta Upload your photo
+                  .tech-text-s (jpg, jpeg, png, gif)<br>maximal size must be less than 2 MB
+                .tech-text-s.edit-profile__card-ava-footer If the photo is not loaded, a stub is displayed.
+                input(type="file").edit-profile__card-ava-input
+              //END   ava
+              +inputMix('License number')
+              include ../elements/download-edit
+              include ../elements/download-edit
+              .download-footer.tech-text-s pdf, doc, Docx, txt, jpeg, png, and the size less than 5 MB
+            //END   card
+
+            //BEGIN body
+            .edit-profile__body.col-12.col-lg-8.ms-auto
+              //BEGIN personal
+              .row
+                h4.h4 Personal information
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    +inputMix('First name')
+                  .col-12.col-lg-6
+                    +inputMix('Last name')
+                  .col-12.col-lg-6
+                    +inputMix('What school you attend')
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="Date of graduation") Date of graduation
+                        option(value="2000") 2000
+                        option(value="2001") 2001
+                        option(value="2002") 2002
+                        option(value="2003") 2003
+                        option(value="2004") 2004
+                        option(value="2005") 2005
+                        option(value="2006") 2006
+                        option(value="2007") 2007
+                        option(value="2008") 2008
+                        option(value="2009") 2009
+                        option(value="2010") 2010
+                        option(value="2011") 2011
+                        option(value="2012") 2012
+                        option(value="2013") 2013
+                        option(value="2014") 2014
+                        option(value="2015") 2015
+                      span.select__placeholder Date of graduation
+                      span.select__error Some error text
+                  .col-12.col-lg-6
+                    +inputMix('Email')
+                  .col-12.col-lg-6
+                    +inputMix('Phone')
+                  .col-12.col-lg-6
+                    .input.calendar-input-single
+                      input(placeholder='Birthday')
+                      span.input__placeholder Birthday
+                      span.input__error Some error text
+                  .col-12.col-lg-6
+                    .select.direct-form__select
+                      select
+                        option(value="Years of experience") Years of experience
+                        option(value="< 1 year") < 1 year
+                        option(value="1 - 5 years") 1 - 5 years
+                        option(value="5 - 10 years") 5 - 10 years
+                        option(value="> 10 years") > 10 years
+                      span.select__placeholder Years of experience
+                      span.select__error Some error text
+              //END   personal
+
+              //BEGIN address
+              .row
+                h4.h4 Address
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="State") State
+                        option(value="Alabama") Alabama
+                        option(value="Nebraska") Nebraska
+                        option(value="Virginia") Virginia
+                        option(value="New Hampshire") New Hampshire
+                        option(value="Massachusetts") Massachusetts
+                        option(value="Rhode Island") Rhode Island
+                        option(value="Connecticut") Connecticut
+                        option(value="New York") New York
+                        option(value="New Jersey") New Jersey
+                        option(value="Pennsylvania") Pennsylvania
+                        option(value="Delaware") Delaware
+                        option(value="Maryland") Maryland
+                        option(value="North Carolina") North Carolina
+                        option(value="South Carolina") South Carolina
+                        option(value="Utah") Utah
+                      span.select__placeholder State
+                      span.select__error Some error text
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="State") City
+                        option(value="Alabama") Alabama
+                        option(value="Nebraska") Nebraska
+                        option(value="Virginia") Virginia
+                        option(value="New Hampshire") New Hampshire
+                        option(value="Massachusetts") Massachusetts
+                        option(value="Rhode Island") Rhode Island
+                        option(value="Connecticut") Connecticut
+                        option(value="New York") New York
+                        option(value="New Jersey") New Jersey
+                        option(value="Pennsylvania") Pennsylvania
+                        option(value="Delaware") Delaware
+                        option(value="Maryland") Maryland
+                        option(value="North Carolina") North Carolina
+                        option(value="South Carolina") South Carolina
+                        option(value="Utah") Utah
+                      span.select__placeholder City
+                      span.select__error Some error text
+                  .col-12
+                    +inputMix('Address')
+                  .col-12.col-lg-6
+                    +inputMix('ZIP')
+                  .col-12.col-lg-6
+                    +inputMix('Miles available to commute')
+              //END   address
+
+              //BEGIN specialization
+              .row
+                h4.h4 Specialization
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="RDA") RDA
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                      span.select__placeholder RDA
+                      span.select__error Some error text
+                  .col-12.col-lg-6
+                    .select
+                      select
+                        option(value="Specialty") Specialty
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                        option(value="lorem ipsum") Lorem ipsum
+                      span.select__placeholder Specialty
+                      span.select__error Some error text
+              //END   specialization
+
+              //BEGIN working days
+              .row
+                h4.h4 Working days
+                .edit-profile__working-days-subtitle.tech-text-s Attention! The working hours there should also be a choice of the time of day according to the American model: AM and PM
+              .edit-profile__body-item
+                .row
+                  .col-12.col-lg-6
+                    +selectDay
+                  .col-12.col-lg-6.edit-profile__select-time
+                    .row
+                      .col-5
+                        +inputMix('From')
+                      .col-5
+                        +inputMix('To')
+                      .col-2
+                        .edit-profile__input-del
+                          +svg('trash')
+                .row
+                  .col-12.col-lg-6
+                    +selectDay
+                  .col-12.col-lg-6.edit-profile__select-time
+                    .row
+                      .col-5
+                        +inputMix('From')
+                      .col-5
+                        +inputMix('To')
+                      .col-2
+                        .edit-profile__input-del
+                          +svg('trash')
+                .row
+                  .tech-text-link.edit-profile__add-working-day Add one more
+              //END   working days
+
+              //BEGIN salary
+              .row
+                .col-12
+                  .edit-profile__salary
+                    .row
+                      h4.h4.edit-profile__salary-title Salary per hour
+                      include ../elements/ui-single-slider
+              //END   salary
+
+              //BEGIN footer
+              .edit-profile__footer
+                .row
+                  .col-sm-6.ms-auto
+                    a(href="#").btn.btn--gradient
+                      span Save
+              //END   footer
+            //END   body
+      //END   edit-profile
+    //end content
+    include ../sections/bottom-sections-wrap

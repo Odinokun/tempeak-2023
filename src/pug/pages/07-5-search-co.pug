@@ -1,0 +1,111 @@
+extends ../_template
+
+block variables
+  - let title       = '07.5 Search contractor results  BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin item(img)
+  .person-row
+    //BEGIN left
+    .person-row__left
+      .person-row__ava
+        img(src="assets/img/persons/person-" + img + ".jpg" alt="avatar")
+    //END   left
+
+    //BEGIN main
+    .person-row__main
+      h3.h3.person-row__title George Smith
+      //BEGIN info
+      .person-row__doc-info
+        span.cta RDA
+        span.cta General dentist
+        span.body-s.person-row__doc-info-decor |
+        span.body-s Los Angeles CA
+        span.body-s 5-10 years of experience
+      //END   info
+      //BEGIN rating
+      .person-row__rating
+        .person-row__rating-text.cta Rate:
+        .rating(data-rating="5")
+          .rating__scale
+            .rating__scale-bg
+          .rating__text.cta
+            strong 5
+            a(href='#') (75)
+      //END   rating
+      //BEGIN verified
+      .person-row__verified
+        .person-row__verified-security-icon
+          +svg('security')
+        .cta Verified
+        .body-s by Tempeak
+        .person-row__verified-info-icon
+          +svg('info')
+          .person-row__verified-info-tooltip
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+      //END   verified
+    //END   main
+
+    //BEGIN right
+    .person-row__right
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+        .profile-card__download-link-icon
+          +svg('file')
+        .profile-card__download-link-text.cta Download Resume
+      button.btn.btn--gradient
+        span Send request
+    //END   right
+
+block content
+  .main-wrap
+    include ../sections/headers/header-unreg
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            a(href="#").page-top__back-link
+              .page-top__back-link-btn
+                +svg('slider-arr')
+              span.cta.page-top__back-link-text Back to search
+            h1.h1.page-top__title Search result
+            .body-m.page-top__subtitle We are finded 1,208 temp staff for your company
+      //END   page-top
+
+      include ../elements/filter
+
+      //BEGIN search-co
+      .search-co
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 10 Jan 2023
+
+        .container
+          .row
+            +item('01')
+
+        .container
+          .row
+            .requests-bo__date
+              .requests-bo__date-item
+                .cta 12 Jan 2023
+
+        .container
+          .row
+            +item('02')
+            +item('03')
+            +item('04')
+        .container
+          .row
+            button.search-co__more-btn
+              img(src="assets/img/anim-gif/autorenew.gif" alt="Tempeak")
+      //END   search-co
+    //end content
+    include ../sections/bottom-sections-wrap

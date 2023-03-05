@@ -17,10 +17,27 @@
   margin-bottom: 40px;
   border-radius: 20px;
 
+  aspect-ratio: 1 / 1;
+
   img {
     display: block;
     width: 100%;
     pointer-events: none;
+  }
+}
+
+.edit-profile__card-ava--no-img {
+  border: 1px dashed #6b6b6b;
+
+  .tech-text-s {
+    color: #6b6b6b;
+  }
+
+  .edit-profile__card-ava-text {
+    .cta,
+    .tech-text-s {
+      color: #242424;
+    }
   }
 }
 
@@ -318,6 +335,19 @@
 .subscribe-promo__btn {
   width: 50%;
   height: 52px;
+}
+
+.subscribe__highlight {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+
+  .h4 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #ffbd06;
+  }
 }
 
 /* end   subscribe */
