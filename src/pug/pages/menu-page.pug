@@ -9,11 +9,18 @@ block variables
 
 mixin link(link)
   li
-    a(href="http://localhost:3000/" + link + ".html" target="_blank") #{link}
+    //a(href="http://localhost:3000/" + link + ".html" target="_blank") #{link}
+    a(href="http://t-2023.odinokun.com/" + link + ".html" target="_blank") #{link}
 
 block content
   .main-wrap
     include ../sections/headers/header-unreg
+    //-include ../sections/headers/header-logout-bo
+    //-include ../sections/headers/header-logout-co
+    //-include ../sections/headers/header-bo
+    //-include ../sections/headers/header-bo-ava
+    //-include ../sections/headers/header-co
+    //-include ../sections/headers/header-co-ava
     main.main
       .top-section
         .container
@@ -43,21 +50,23 @@ block content
                 +link('05-1-delete')
                 +link('05-2-delete-yes')
                 +link('05-2-specials-delete')
-                +link('06-2-change-password')
                 +link('06-1-profile-co')
                 +link('06-1-profile-co-no-ava')
+                +link('06-2-change-password')
                 +link('06-3-edit-profile')
                 +link('06-3-1-edit-profile-warning')
                 +link('06-4-requests-co')
                 +link('06-6-job-opport')
                 +link('07-1-profile-bo')
                 +link('07-1-profile-bo-no-ava')
+                +link('07-3-1-subscr-warning')
                 +link('07-4-search-co')
                 +link('07-4-search-bo')
                 +link('07-5-search-co')
                 +link('07-6-requests-bo')
                 +link('07-7-specials')
                 +link('07-8-edit-profile-bo')
+                +link('07-8-subscr')
                 +link('07-9-job-bo')
                 +link('07-9-1-job-bo-delete')
                 +link('07-11-add-new-job')

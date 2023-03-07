@@ -9,13 +9,18 @@
 @import 'core/btns';
 
 //elements
-@import 'elements/ui';
-@import 'elements/callback-btn';
 @import 'elements/logo';
+@import 'elements/header__right-mob';
 @import 'elements/menu';
 @import 'elements/logins';
-@import 'elements/header__right-mob';
 @import 'elements/burger';
+@import 'elements/user-ava';
+@import 'elements/header-right-menu';
+@import 'elements/main-menu';
+@import 'elements/second-menu';
+
+@import 'elements/ui';
+@import 'elements/callback-btn';
 @import 'elements/clinic-card';
 @import 'elements/ui-single-slider';
 @import 'elements/person-row';
@@ -90,3 +95,4 @@
 @import 'pages/requests-bo';
 @import 'pages/jobs';
 @import 'pages/search-co';
+@import 'pages/subscr';

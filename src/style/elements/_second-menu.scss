@@ -1,0 +1,149 @@
+.second-menu {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100vh;
+  transition: .3s;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+
+  &.active {
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 1);
+
+    .second-menu__col {
+      transform: translateX(0);
+    }
+  }
+}
+
+.second-menu__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 30px 30px 30px;
+  transition: .3s;
+  transform: translateX(-100%);
+
+  @include min(375) {
+    padding: 60px 40px 30px 40px;
+  }
+  @include min(992) {
+    max-width: 620px;
+    padding: 0 40px 40px 40px;
+    border-radius: 0 40px 40px 0;
+  }
+}
+
+/* begin MENU */
+.second-menu__col-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(36, 36, 36, .1);
+}
+
+.second-menu {
+  .header-right-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .header-right-menu__list {
+    flex-direction: column;
+  }
+
+  .header-right-menu__item {
+    margin-bottom: 17px;
+    padding: 0;
+  }
+
+  .header-right-menu__link {
+    font-weight: 600;
+    line-height: 115%;
+    user-select: none;
+    letter-spacing: -.01em;
+    color: #242424;
+
+    @include responsive-font(50, 26);
+  }
+
+  .header-right-menu__link-num {
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 80%);
+  }
+
+  .header-logout {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include min(768) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .btn {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-left: 0;
+
+      @include min(768) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    span {
+      @include responsive-font(50, 26);
+    }
+  }
+
+
+  .user-ava__menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    transform: none;
+    pointer-events: auto;
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .user-ava__menu-item {
+    padding: 16px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+/* end   MENU */

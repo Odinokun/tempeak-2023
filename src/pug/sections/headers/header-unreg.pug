@@ -1,14 +1,12 @@
 //BEGIN header
 header.header#header
-  .header__inn.header__inn--main
-    .container
-      .row
+  .container
+    .row
+      .header__left
         include ../../elements/logo
-        include ../../elements/header__right-mob
-  .header__inn.header__inn--second
-    .container
-      .row
-        include ../../elements/logo
-        include ../../elements/menu/menu
-        include ../../elements/logins
+      include ../../elements/menu/menu
+      include ../../elements/logins
+      include ../../elements/header__right-mob
 //END   header
+
+include ../../elements/menu/main-menu

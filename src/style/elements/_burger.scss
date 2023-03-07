@@ -25,14 +25,16 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
   height: $burger-height;
   opacity: 0;
 
-  &:checked + .burger__decor::before {
-    transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
-  }
+  @include max(991) {
+    &:checked + .burger__decor::before {
+      transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
+    }
 
-  &:checked + .burger__decor::after {
-    transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
+    &:checked + .burger__decor::after {
+      transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
 
-    filter: initial;
+      filter: initial;
+    }
   }
 }
 
@@ -58,5 +60,19 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
     transform: translateY($burger-item-offset);
 
     filter: drop-shadow(0 $burger-item-shadow $burger-color);
+  }
+}
+
+.main-menu {
+  .burger__input {
+    & + .burger__decor::before {
+      transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
+    }
+
+    & + .burger__decor::after {
+      transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
+
+      filter: initial;
+    }
   }
 }

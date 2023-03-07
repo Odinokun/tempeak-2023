@@ -1,0 +1,155 @@
+extends ../_template
+
+block variables
+  - let title       = '07.8 Edit proflie BO / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+mixin inputMix(place)
+  .input
+    input(placeholder='' + place)
+    span.input__placeholder #{place}
+    span.input__error Some error text
+
+block content
+  .main-wrap
+    include ../sections/headers/header-bo
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            h1.h1.page-top__title Subscription
+      //END   page-top
+
+      //BEGIN warning
+      .subscription-warning
+        .container
+          .row
+            //BEGIN banner
+            .profile-body__banner.profile-body__banner--warning
+              .profile-body__banner-icon
+                img(src="assets/img/anim-gif/error.gif" alt="Tempeak")
+              .profile-body__banner-text Warning! Please add a valid credit card to proceed with the subscription!
+            //END   banner
+      //END   warning
+
+
+      //BEGIN subscr-info
+      .subscr-info
+        .container
+          .row
+            .col-12.col-lg-6
+              h3.h3 Information
+              //BEGIN subscr-info__item
+              .subscr-info__item
+                .subscr-info__row
+                  .tech-text-s ID
+                  .cta 000000000088
+                .subscr-info__row
+                  .tech-text-s Customer
+                  .cta Darrell Steward
+                .subscr-info__row
+                  .tech-text-s Current period
+                  .cta 02 January 2023 - 02 February 2023
+                .subscr-info__row
+                  .tech-text-s Created
+                  .cta 02 October 2022
+                .subscr-info__row
+                  .tech-text-s Status
+                  .cta.active Active
+              //END   subscr-info__item
+
+              //BEGIN slider
+              .subscr-info__slider
+                .profile-body__subscription-row.profile-body__subscription-row--warning(data-current="3" data-finish="31")
+                  .profile-body__subscription-row-scale
+                  .profile-body__subscription-row-label.cta
+              //END   slider
+
+            .col-12.col-lg-6
+              //BEGIN salary
+              form.edit-profile__salary
+                .row
+                  h4.h4.edit-profile__salary-title Payment and subscription
+
+                  //BEGIN add-card-form
+                  .add-card-form
+                    .row
+                      .col-12
+                        +inputMix('Card number')
+                      .col-4
+                        +inputMix('MM/YY')
+                      .col-4
+                        +inputMix('CVC Code')
+                      .col-4
+                        +inputMix('Zip Code')
+                  //END   add-card-form
+
+                  //BEGIN subscribe-item
+                  .subscribe-item.col-12
+                    //BEGIN radio
+                    .subscribe-item__radio-wrap
+                      .subscribe-item__radio.radio
+                        input(type="radio" name="subscribe" checked='true')
+                        span
+                      .subscribe-item__radio-text.cta Monthly
+                    //END   radio
+                    .subscribe-item__period
+                      .subscribe-item__period-days.tech-text-s per month
+                      .subscribe-item__period-price.h4 $99.00
+                  //END   subscribe-item
+
+                  //BEGIN renew
+                  .edit-profile__salary-renew
+                    .switch
+                      input(type="checkbox")
+                      .switch__body
+                      .switch__text.cta Auto renew subscription
+                  //END   renew
+
+                  .subscr-info__btn.col-12
+                    button.btn.btn--gradient
+                      span Save
+              //END   salary
+      //END   subscr-info
+
+      //BEGIN invoices
+      .invoices
+        .container
+          .row
+            h3.h3.invoices__title Invoices
+            .invoices-table-wrap
+              //BEGIN invoices-table
+              .invoices-table
+                //BEGIN row
+                .invoices-table__row
+                  .invoices-table__item.col-2
+                    .body-s Amount
+                  .invoices-table__item.col-3.col-lg-2
+                    .body-s Date
+                  .invoices-table__item.col-3.col-lg-4
+                    .body-s Card
+                  .invoices-table__item.col-2
+                    .body-s Status
+                  .invoices-table__item.col-2
+                    .body-s Invoice
+                //END   row
+
+                //BEGIN row
+                .invoices-table__row
+                  .invoices-table__item.col-2
+                    .body-s No payments yet.
+                  .invoices-table__item.col-3.col-lg-2
+                  .invoices-table__item.col-3.col-lg-4
+                  .invoices-table__item.col-2
+                  .invoices-table__item.col-2
+                //END   row
+              //END   invoices-table
+      //END   invoices
+    //end content
+    include ../sections/bottom-sections-wrap-no-btn

@@ -18,26 +18,26 @@ block content
           .row
             //BEGIN left
             .col-12.col-md-6
-              h1.h1.contacts__title Contacts
+              h1.h1.contacts__title Contact
               .contacts__links
-                a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts__info-link
+                .contacts__info-link
                   .contacts__info-icon
                     +svg('map-pin')
                   .contacts__info-text
                     span.tech-text-s Address:
-                    span.body-m Columbia, МD
-                a(href="tel:+6677779776").contacts__info-link
+                    a(href="#" target="_blank" rel="nofollow noopener noreferrer").body-m Columbia, МD
+                .contacts__info-link
                   .contacts__info-icon
                     +svg('phone-pin')
                   .contacts__info-text
                     span.tech-text-s Phone:
-                    span.body-m 667-777-9776
-                a(href="mailto:service@tempeak.com").contacts__info-link
+                    a(href="tel:+6677779776").body-m 667-777-9776
+                .contacts__info-link
                   .contacts__info-icon
                     +svg('mail-pin')
                   .contacts__info-text
                     span.tech-text-s Email:
-                    span.body-m service@tempeak.com
+                    a(href="mailto:service@tempeak.com").body-m service@tempeak.com
             //END   left
 
             //BEGIN right

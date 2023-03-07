@@ -2,13 +2,20 @@
   z-index: 10;
   display: block;
   flex: none;
-  width: 130px;
-  margin-right: 15px;
+  width: 98px;
   padding: 0;
+
+  @include min(1200) {
+    width: 130px;
+  }
 
   img {
     display: block;
     width: 100%;
-    height: 40px;
+    height: 30px;
+
+    @include min(1200) {
+      height: 40px;
+    }
   }
 }

@@ -1,70 +1,119 @@
 .header {
-  position: absolute;
-  z-index: 100;
+  position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: rgba(255, 255, 255, .75);
+
+  backdrop-filter: blur(10px);
+  @include min(992) {
+    position: absolute;
+    z-index: 100;
+    background-color: transparent;
+
+    backdrop-filter: none;
+  }
 
   .container {
     max-width: 100%;
   }
 
-  &.active {
-    position: fixed;
-
-    .header__inn--second {
-      transform: translateX(0);
-    }
-  }
-}
-
-
-.header__inn--main {
-  position: relative;
-
   .row {
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
+
+    @include min(1200) {
+      height: 70px;
+    }
   }
 }
 
-.header__inn--second {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: auto;
-  width: 100%;
-  transition: transform .5s;
-  transform: translateX(-100vw);
-  background-color: #fff6de;
+.header__left {
+  display: flex;
+  align-items: center;
+  width: auto;
 
-  @include min(1200) {
-    overflow: hidden;
-    height: auto;
-    transform: translateX(0);
-    background-color: transparent;
+  .burger {
+    display: none;
+    margin-left: 30px;
+
+    @include min(992) {
+      display: flex;
+    }
   }
+}
 
+.header__right {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 0;
 
-  .row {
-    flex-direction: column;
-    height: 100vh;
-    padding-top: 70px;
-    padding-bottom: 50px;
+  .burger {
+    //margin-left: 30px;
+    display: flex;
+    margin-right: 12px;
 
-    @include min(1200) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      height: 70px;
-      padding-top: 0;
-      padding-bottom: 0;
+    @include min(992) {
+      display: none;
     }
   }
 
-  .logo {
-    pointer-events: none;
-    opacity: 0;
+  .user-ava {
+    @include min(992) {
+      margin-left: 30px;
+    }
+
+    &::before {
+      @include min(992) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -30px;
+        width: 1px;
+        height: 30px;
+        margin: auto;
+        content: '';
+        background-color: rgba(36, 36, 36, .15);
+      }
+    }
+  }
+}
+
+.header-logout {
+  display: none;
+
+  @include min(992) {
+    display: inline-flex;
+  }
+
+  &:hover {
+    svg {
+      fill: $brand;
+    }
+
+    .btn {
+      color: $brand;
+    }
+  }
+
+  svg {
+    flex: none;
+    //fill: #6b6b6b;
+    fill: #242424;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    transition: .5s;
+  }
+
+  .btn {
+    height: 30px;
+    padding: 5px 30px 5px 5px;
+    //color: #6b6b6b;
+    color: #242424;
   }
 }

@@ -189,6 +189,7 @@
 
 .edit-profile__salary-title {
   margin-bottom: 20px;
+  padding-left: 0;
 
   @include min(768) {
     margin-bottom: 40px;

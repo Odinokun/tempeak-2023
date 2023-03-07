@@ -1,0 +1,24 @@
+//BEGIN second-menu
+#second-menu.second-menu
+  .second-menu__col
+    .second-menu__col-item
+      include ./header-right-menu-bo
+      .header-logout
+        a(href="#").btn.btn--transparent
+          +svg('magnify')
+          span Search contractor
+
+    ul.user-ava__menu
+      li.user-ava__menu-item
+        a(href="#").user-ava__menu-link
+          +svg('lock')
+          span Security
+      li.user-ava__menu-item
+        a(href="#").user-ava__menu-link
+          +svg('settings')
+          span Edit profile
+      li.user-ava__menu-item
+        a(href="#").user-ava__menu-link
+          +svg('power')
+          span Log out
+//END   second-menu

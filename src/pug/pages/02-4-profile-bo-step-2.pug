@@ -29,12 +29,12 @@ mixin inputMix(place)
 
 block content
   .main-wrap
-    include ../sections/headers/header-unreg
+    include ../sections/headers/header-logout-bo
 
     //begin content
     main.main
       //BEGIN page-top
-      .page-top.page-top--co
+      .page-top.page-top--bo
         .container
           .row
             h1.h1.page-top__title Profile
@@ -55,10 +55,6 @@ block content
                 .tech-text-s.edit-profile__card-ava-footer If the photo is not loaded, a stub is displayed.
                 input(type="file").edit-profile__card-ava-input
               //END   ava
-              +inputMix('License number')
-              include ../elements/download-edit
-              include ../elements/download-edit
-              .download-footer.tech-text-s pdf, doc, Docx, txt, jpeg, png, and the size less than 5 MB
             //END   card
 
             //BEGIN body

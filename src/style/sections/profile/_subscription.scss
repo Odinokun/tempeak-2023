@@ -44,6 +44,12 @@
   background-image: linear-gradient(90deg, #f3fff6 0%, #e9ffee 100%);
 }
 
+.profile-body__subscription-row--warning {
+  .profile-body__subscription-row-scale {
+    background-image: linear-gradient(90deg, rgba(255, 224, 224, 0) 0%, rgba(255, 224, 224, .85) 100%);
+  }
+}
+
 .profile-body__subscription-row-label {
   position: absolute;
   top: 100%;
@@ -60,5 +66,23 @@
     height: 10px;
     content: '';
     background-color: #000;
+  }
+}
+
+.add-card-form {
+  margin-bottom: 30px;
+  padding: 0;
+
+  .row {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+}
+
+.subscr-info__btn {
+  padding: 30px 0 0 0;
+
+  .btn {
+    width: 100%;
   }
 }
