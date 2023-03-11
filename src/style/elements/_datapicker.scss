@@ -1,3 +1,11 @@
+.calendar-input,
+.calendar-time-input,
+.calendar-input-single {
+  input {
+    cursor: pointer;
+  }
+}
+
 .daterangepicker {
   overflow: auto;
   width: 278px;
@@ -8,11 +16,11 @@
   box-shadow: 0 24px 48px rgba(8, 28, 34, .08);
 
   @include max(1024) {
-    position: fixed;
-    top: 50% !important;
-    right: auto !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%);
+    //position: fixed;
+    //top: 50% !important;
+    //right: auto !important;
+    //left: 50% !important;
+    //transform: translate(-50%, -50%);
   }
   @include min(710) {
     width: 674px;
@@ -199,23 +207,23 @@
     padding: 17px 24px 24px 24px;
     border: none;
 
-    &::before {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      right: 48px;
-      bottom: 0;
-      width: 14px;
-      height: 12px;
-      margin: auto;
-      content: '';
-      transform: translateY(-3px);
-      pointer-events: none;
-      background-image: url('../img/arr-right.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: contain;;
-    }
+    //&::before {
+    //  position: absolute;
+    //  z-index: 1;
+    //  top: 0;
+    //  right: 48px;
+    //  bottom: 0;
+    //  width: 14px;
+    //  height: 12px;
+    //  margin: auto;
+    //  content: '';
+    //  transform: translateY(-3px);
+    //  pointer-events: none;
+    //  background-image: url('../img/arr-right.svg');
+    //  background-repeat: no-repeat;
+    //  background-position: 50% 50%;
+    //  background-size: contain;;
+    //}
 
     &::after {
       position: absolute;
@@ -240,11 +248,16 @@
     height: 48px;
     margin: 0;
     padding-left: 24px;
+    transition: .3s;
     text-align: left;
     color: #242424;
     border: none;
     border-radius: 12px !important;
     background: linear-gradient(90deg, #ffd04e -8.24%, #ffe59e 107.45%);
+
+    &:hover {
+      background: $brand;
+    }
   }
 
   .drp-selected,
@@ -256,3 +269,65 @@
 .daterangepicker.single {
   width: 278px !important;
 }
+
+
+/* begin TIME */
+.calendar-time-input-date {
+  width: 250px;
+
+  @include min(425) {
+    width: 100%;
+    max-width: calc(100% - 30px);
+  }
+  @include min(576) {
+    max-width: 406px;
+  }
+
+  .drp-calendar {
+    display: block !important;
+    width: 100%;
+    padding: 10px 0 10px 0 !important;
+
+    @include min(425) {
+      display: inline-block !important;
+      width: 50%;
+      padding: 10px 0 10px 0 !important;
+    }
+  }
+
+  .drp-calendar.left {
+    margin-bottom: -25px;
+
+    @include min(425) {
+      margin-bottom: 0;
+    }
+
+    .calendar-time {
+      @include min(425) {
+        padding: 0 5px 0 20px;
+      }
+    }
+  }
+
+  .drp-calendar.right {
+    .calendar-time {
+      @include min(425) {
+        padding: 0 20px 0 5px;
+      }
+    }
+  }
+
+  .calendar-time {
+    display: flex;
+  }
+
+  .calendar-time::after {
+    display: none;
+  }
+
+  .calendar-table {
+    display: none;
+  }
+}
+
+/* end   TIME */

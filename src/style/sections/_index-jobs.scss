@@ -3,7 +3,7 @@
   padding-bottom: 50px;
 
   @include min(992) {
-    padding-bottom: 115px;
+    padding-bottom: 100px;
   }
 }
 
@@ -35,8 +35,14 @@
 }
 
 .index-jobs__footer {
+  margin-top: -60px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  @include min(576) {
+    margin-top: -70px;
+    padding-bottom: 30px;
+  }
 }
 
 .index-jobs__footer-link {

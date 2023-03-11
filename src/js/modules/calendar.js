@@ -1,6 +1,6 @@
 module.exports = function () {
 
-  //  DOUBLE calendar
+  // ***************** DOUBLE CALENDAR *****************
   const calendarInput =  $('.calendar-input input');
 
   $(calendarInput).daterangepicker({
@@ -43,10 +43,15 @@ module.exports = function () {
     $(this).val(picker.startDate.format('DD MMM hh:mm A') + ' - ' + picker.endDate.format('DD MMM hh:mm A'));
   });
 
+
+
+  // ***************** TIME CALENDAR *****************
   const calendarTimeInput =  $('.calendar-time-input input');
 
   $(calendarTimeInput).daterangepicker({
     timePicker: true,
+    showDropdowns: false,
+    applyButtonClasses: 'applyBtn btn btn-sm btn-primary calendar-time-input-btn',
     autoUpdateInput: false,
     locale: {
       format: 'DD MMM',
@@ -77,6 +82,10 @@ module.exports = function () {
     }
   });
 
+  $(calendarTimeInput).on('show.daterangepicker', function (ev, picker) {
+    $('.calendar-time-input-btn').parents('.daterangepicker').addClass('calendar-time-input-date');
+  });
+
   $(calendarTimeInput).on('apply.daterangepicker', function (ev, picker) {
     const targetParent = $(this).parent('.input');
     $(targetParent).addClass('active');
@@ -84,7 +93,9 @@ module.exports = function () {
     $(this).val(picker.startDate.format('hh:mm A') + ' - ' + picker.endDate.format('hh:mm A'));
   });
 
-  //  SINGLE calendar
+
+
+  // ***************** SINGLE CALENDAR *****************
   const calendarGraduation =  $('.calendar-input-single input');
 
   $(calendarGraduation).daterangepicker({

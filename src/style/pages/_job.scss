@@ -10,6 +10,28 @@
     margin-bottom: 20px;
   }
 
+  .calendar-input,
+  .calendar-time-input,
+  .calendar-input-single {
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 23px;
+      bottom: 0;
+      width: 16px;
+      height: 90%;
+      margin: auto;
+      content: '';
+      pointer-events: none;
+      background-color: #fff;
+      background-image: url('../img/select-btn.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+
   .h4 {
     margin-bottom: 20px;
   }

@@ -1,12 +1,29 @@
+.ui-single-slider-input {
+  margin-top: -5px;
+  padding: 0;
+
+  @include min(768) {
+    display: none;
+  }
+
+  .input {
+    margin-bottom: 10px !important;
+  }
+}
+
 .ui-single-slider {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 12px;
-  margin-bottom: 20px;
-  border: 2px solid #e9e9e9 !important;
-  border-radius: 10px;
-  background: #fff;
+  display: none;
+
+  @include min(768) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e9e9e9 !important;
+    border-radius: 10px;
+    background: #fff;
+  }
 
 
   .ui-state-default,

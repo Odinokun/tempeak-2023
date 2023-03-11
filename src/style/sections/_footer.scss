@@ -149,8 +149,13 @@
 }
 
 .footer__menu-link {
+  transition: .3s;
   text-decoration: none;
   color: #fff;
+
+  &:hover {
+    color: $brand;
+  }
 }
 
 

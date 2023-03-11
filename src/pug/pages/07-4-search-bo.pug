@@ -21,20 +21,22 @@ block content
         div(class="index-top__ava index-top__ava--" + className)
           img(src="assets/img/avatars/ava-" + img + ".jpg" alt="temPeak")
 
-      //BEGIN index-top
-      .index-top.top-section
-        .container
-          .row
-            h1.index-top__title.h1 Search Contractor
-            .index-top__subtitle.body-l Unlike traditional staffing agencies, we connect you directly with professional staff
+      //BEGIN search-co-bo
+      .search-co-bo
+        //BEGIN index-top
+        .index-top.top-section
+          .container
+            .row
+              h1.index-top__title.h1 Search Contractor
+              .index-top__subtitle.body-l Unlike traditional staffing agencies, we connect you directly with professional staff
 
-            include ../elements/search-contractor-bo
+              include ../elements/search-contractor-bo
 
-            .tech-text-s.index-top__undertitle The search is based on the State <a href="#">CA</a> on your profile. To change a other state, please change the geolocation in your <a href="#">profile settings.</a>
+              .tech-text-s.index-top__undertitle The search is based on the State CA on your profile. To change a other state, please change the geolocation in your <a href="#">profile settings.</a>
 
-            include ../elements/index-top-rounds
-        include ../elements/ad-banner
-      //END   index-top
+              include ../elements/index-top-rounds
+          include ../elements/ad-banner
+        //END   index-top
+      //END   search-co-bo
     //end content
-    include ../sections/bottom-sections-wrap-no-footer
-
+    include ../sections/bottom-sections-wrap-no-footer-no-btn

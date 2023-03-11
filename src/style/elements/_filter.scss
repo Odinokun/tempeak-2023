@@ -98,6 +98,53 @@
     margin-bottom: 0;
   }
 
+  .input {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 23px;
+      bottom: 0;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      content: '';
+      background-color: #fff;
+      background-image: url('../img/select-btn.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+
+    input {
+      font-size: 14px;
+      font-weight: 600;
+      width: 100%;
+      height: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &::-webkit-input-placeholder {
+        font-weight: 600;
+      }
+
+      &::-moz-placeholder {
+        font-weight: 600;
+      }
+
+      &::-ms-input-placeholder {
+        font-weight: 600;
+      }
+    }
+
+    .input__placeholder {
+      display: none;
+    }
+  }
+
+  .input,
   .select {
     width: 100%;
 
@@ -109,6 +156,7 @@
     @include min(1200) {
       width: 200px;
     }
+
 
     select + span {
       width: 100%;

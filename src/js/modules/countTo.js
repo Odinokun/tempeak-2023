@@ -15,7 +15,7 @@ module.exports = function () {
       let scroll = $(window).scrollTop() + $(window).height();
       //Если скролл до конца елемента
       // let offset = $element.offset().top + $element.height();
-      let offset = elements.offset().top + 50;
+      let offset = elements.offset().top + 0;
       //Если скролл до начала елемента
       // let offset = $element.offset().top
 

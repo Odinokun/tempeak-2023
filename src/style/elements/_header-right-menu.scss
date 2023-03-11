@@ -23,8 +23,14 @@
   font-weight: 600;
   line-height: 1;
   position: relative;
+  user-select: none;
+  transition: .3s;
   text-decoration: none;
   color: #6b6b6b;
+
+  &:hover {
+    color: $brand;
+  }
 }
 
 .header-right-menu__link-num {

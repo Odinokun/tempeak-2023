@@ -2,9 +2,20 @@
   padding-bottom: 110px;
 }
 
+.faq-header {
+  position: sticky;
+  z-index: 1;
+  top: 60px;
+  padding-top: 10px;
+  background-color: #fff;
+
+  @include min(992) {
+    top: 0;
+  }
+}
+
 .faq-header__inn {
   display: flex;
-  padding-bottom: 40px;
 }
 
 .faq-header__item {
@@ -29,6 +40,10 @@
       color: #242424;
     }
   }
+}
+
+.faq-body {
+  padding-top: 40px;
 }
 
 .faq-body__title {

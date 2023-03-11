@@ -1,6 +1,7 @@
 /* begin FILTER */
 .requests-filter {
   position: relative;
+  z-index: 1;
   display: flex;
   overflow: auto;
   width: 100%;
@@ -40,11 +41,17 @@
   }
 
   .cta {
-    color: #373737;
+    text-decoration: none;
+    color: #6b6b6b;
+
+    &:hover {
+      color: #242424;
+    }
   }
 
   &.active {
     .cta {
+      pointer-events: none;
       color: #242424;
     }
   }

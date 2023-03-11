@@ -74,6 +74,13 @@
     border: none;
   }
 
+  .ui-menu-item {
+    &:first-child {
+      //display: none;
+      opacity: 0;
+      height: 0;pointer-events: none;
+    }
+  }
 
   .ui-state-active,
   .ui-widget-content .ui-state-active {

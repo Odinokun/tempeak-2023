@@ -21,5 +21,7 @@ $(function() {
   require('./modules/input-type-file')();
   require('./modules/subscription')();
   require('./modules/filter-close')();
+  require('./modules/delete-input')();
+  require('./modules/salary-input')();
 
 });

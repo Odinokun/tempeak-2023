@@ -1,7 +1,6 @@
 .index-top {
   display: flex;
   overflow: hidden;
-  min-height: 100vh;
   padding-bottom: 0;
 
   @include min(768) {
