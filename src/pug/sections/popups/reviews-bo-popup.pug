@@ -4,7 +4,7 @@ mixin person-row(img, title, rating)
     //BEGIN left
     .person-row__left
       .person-row__ava
-        img(src="assets/img/clinics/clinic-" + img + ".jpg" alt="avatar")
+        img(src="assets/img/persons/person-" + img + ".jpg" alt="avatar")
     //END   left
 
     //BEGIN main
@@ -36,8 +36,8 @@ mixin person-row(img, title, rating)
     //END   date
   //END   person-row
 
-//BEGIN reviews-wrap
-#reviews-popup.popup
+//BEGIN reviews-bo-wrap
+#reviews-bo-popup.popup
   .reviews-popup.popup-body
     .popup-close-btn
       +svg('close')
@@ -45,7 +45,7 @@ mixin person-row(img, title, rating)
     //BEGIN reviews-header
     .reviews-header
       .container
-        h1.h1.reviews__title Reviews about <span>George Smith</span>
+        h1.h1.reviews__title Reviews about <span>Baltimore Dental Group</span>
         //BEGIN rating
         .reviews-header__rating
           .reviews-header__rating-text.cta Rate:
@@ -62,9 +62,9 @@ mixin person-row(img, title, rating)
     .reviews-list
       .container
         .row
-          +person-row('01', 'Baltimore Dental GroupBaltimore Dental GroupBaltimore Dental Group', '5')
-          +person-row('02', 'Happy Dental', '1.2')
-          +person-row('03', 'Dr. Mate', '4.7')
-          +person-row('04', 'Hello tooth', '0')
+          +person-row('01', 'George Smith', '5')
+          +person-row('02', 'Lilu Jackson', '1.2')
+          +person-row('03', 'Lee Wui', '4.7')
+          +person-row('04', 'Bob Snail', '0')
     //END   reviews-list
-//END   reviews-wrap
+//END   reviews-bo-wrap

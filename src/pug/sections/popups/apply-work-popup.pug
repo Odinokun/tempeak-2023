@@ -1,0 +1,18 @@
+//BEGIN apply-work-wrap
+#apply-work-popup.popup
+  .apply-work.popup-body
+    .popup-close-btn
+      +svg('close')
+
+    .container
+      .full-access__icon
+        img(src="assets/img/anim-gif/error.gif" alt="lock")
+      h2.h1.full-access__title Do you really want to accept the job?
+      .full-access__btns-wrap
+        a(href="#").btn.btn--gradient.full-access__btn
+          span Yes
+        .full-access__delimeter
+          span or
+        a(href="#").btn.btn--white-and-black.full-access__btn
+          span No
+//END   apply-work-wrap

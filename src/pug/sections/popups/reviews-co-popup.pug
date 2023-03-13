@@ -1,0 +1,70 @@
+mixin person-row(img, title, rating)
+  //BEGIN person-row
+  .person-row
+    //BEGIN left
+    .person-row__left
+      .person-row__ava
+        img(src="assets/img/clinics/clinic-" + img + ".jpg" alt="avatar")
+    //END   left
+
+    //BEGIN main
+    .person-row__main
+      h3.h3.person-row__title #{title}
+      //BEGIN info
+      .person-row__doc-info
+        span.cta Darrell Steward
+      //END   info
+      //BEGIN rating
+      .person-row__rating
+        .person-row__rating-text.cta Rate:
+        .rating(data-rating="" + rating)
+          .rating__scale
+            .rating__scale-bg
+          .rating__text.cta
+            strong #{rating}
+      //END   rating
+      //BEGIN text
+      .person-row__text
+        .body-s In the eighteenth century the German philosopher Immanuel Kant developed a theory of knowledge in which knowledge about space can be both a priori and synthetic. According to Kant, knowledge about space is synthetic, in that statements about space are not simply true by virtue of the meaning of the words in the statement. In his work, Kant rejected the view that space must be either a substance or relation. Instead he came to the conclusion that space and time are not discovered by humans to be objective features of the world, but imposed by us as part of a framework for organizing experience.
+      //END   text
+    //END   main
+    //BEGIN date
+    .person-row__date
+      .person-row__date-icon
+        +svg('clock-2')
+      .person-row__date-text.tech-text-s 10 Jan 2023
+    //END   date
+  //END   person-row
+
+//BEGIN reviews-co-wrap
+#reviews-co-popup.popup
+  .reviews-popup.popup-body
+    .popup-close-btn
+      +svg('close')
+
+    //BEGIN reviews-header
+    .reviews-header
+      .container
+        h1.h1.reviews__title Reviews about <span>George Smith</span>
+        //BEGIN rating
+        .reviews-header__rating
+          .reviews-header__rating-text.cta Rate:
+          .rating(data-rating="4.8")
+            .rating__scale
+              .rating__scale-bg
+            .rating__text.cta
+              strong 4.8
+              a(href='#') (75)
+        //END   rating
+    //END   reviews-header
+
+    //BEGIN reviews-list
+    .reviews-list
+      .container
+        .row
+          +person-row('01', 'Baltimore Dental Group', '5')
+          +person-row('02', 'Happy Dental', '1.2')
+          +person-row('03', 'Dr. Mate', '4.7')
+          +person-row('04', 'Hello tooth', '0')
+    //END   reviews-list
+//END   reviews-co-wrap

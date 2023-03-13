@@ -1,6 +1,24 @@
 .calendar-input,
 .calendar-time-input,
 .calendar-input-single {
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 23px;
+    bottom: 0;
+    width: 20px;
+    height: 90%;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    background-color: #fff;
+    background-image: url('../img/select-btn.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 16px 8px;
+  }
+
   input {
     cursor: pointer;
   }

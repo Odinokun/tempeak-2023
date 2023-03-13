@@ -1,0 +1,86 @@
+extends ../_template
+
+block variables
+  - let title       = '08.9 Profile BO request in complete status / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-co-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--co
+        .container
+          .row
+            .page-top__verified
+              //BEGIN verified
+              .person-row__verified
+                .person-row__verified-security-icon
+                  +svg('security')
+                .cta Verified
+                .body-s by Tempeak
+                .person-row__verified-info-icon
+                  +svg('info')
+                  .person-row__verified-info-tooltip
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+              //END   verified
+      //END   page-top
+
+      //BEGIN profile
+      .profile
+        .container
+          //BEGIN profile__left
+          .profile__left
+            //BEGIN profile-card
+            .profile-card
+              .profile-card__ava
+                img(src="assets/img/profile-bo-ava.jpg" alt="avatar")
+              h3.h3.profile-card__title Baltimore Dental Group
+              .cta.profile-card__position Darrell Steward
+              a(href="#").body-s.profile-card__experience baltimoredentalgroup.com
+              .profile-card__rating
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+
+              .profile-card__status
+                include ../elements/status/status-declined
+                .profile-card__status-info
+                  +svg('clock')
+                  .tech-text-s Time of request: 11 October 2022 03:30 PM
+              .profile-card__last-visit.profile-card__last-visit--bo.tech-caps-text Was online 2 hours ago
+            //END   profile-card
+          //END   profile__left
+
+          //BEGIN profile-body
+          .profile-body
+            include ../sections/profile/text
+            include ../sections/profile/info-sm
+            include ../sections/profile/schedule-sm
+
+            //BEGIN profile-body__messages
+            .profile-body__messages
+              h3.h3.messages-title Messages
+              .messages
+                include ../sections/profile/message-top
+                include ../sections/profile/message
+                include ../sections/profile/message-form-replay
+              include ../sections/profile/message-form
+            //END   profile-body__messages
+          //END   profile-body
+      //END   profile
+
+    //end content
+    include ../sections/bottom-sections-wrap-no-btn

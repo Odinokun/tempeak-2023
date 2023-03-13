@@ -1,0 +1,92 @@
+extends ../_template
+
+block variables
+  - let title       = '08.2 Profile CO request in accepted status / Tempeak'
+  - let description = 'TemPeak'
+
+  - let breadcrumbs     = 'TemPeak breadcrumbs'
+  - let headerClass = 'reddy'
+
+block content
+  .main-wrap
+    include ../sections/headers/header-bo-ava
+
+    //begin content
+    main.main
+      //BEGIN page-top
+      .page-top.page-top--bo
+        .container
+          .row
+            .page-top__verified
+              //BEGIN verified
+              .person-row__verified
+                .person-row__verified-security-icon
+                  +svg('security')
+                .cta Verified
+                .body-s by Tempeak
+                .person-row__verified-info-icon
+                  +svg('info')
+                  .person-row__verified-info-tooltip
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque libero magnam obcaecati quam tempore. Doloribus ipsam itaque magni quidem similique.
+              //END   verified
+      //END   page-top
+
+      //BEGIN profile
+      .profile
+        .container
+          //BEGIN profile__left
+          .profile__left
+            //BEGIN profile-card
+            .profile-card
+              .profile-card__ava
+                img(src="assets/img/profile-ava.jpg" alt="avatar")
+              h3.h3.profile-card__title George Smith
+              .cta.profile-card__position RDA General dentist
+              .body-s.profile-card__experience 5-10 years of experience
+              .profile-card__rating
+                //BEGIN rating
+                .person-row__rating
+                  .person-row__rating-text.cta Rate:
+                  .rating(data-rating="4.8")
+                    .rating__scale
+                      .rating__scale-bg
+                    .rating__text.cta
+                      strong 4.8
+                      a(href='#') (75)
+                //END   rating
+
+              .profile-card__status
+                include ../elements/status/status-declined
+                .profile-card__status-info
+                  +svg('clock')
+                  .tech-text-s Time of request: 11 October 2022 03:30 PM
+
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+                .profile-card__download-link-icon
+                  +svg('file')
+                .profile-card__download-link-text.cta Download Resume
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").profile-card__download-link
+                .profile-card__download-link-icon
+                  +svg('file')
+                .profile-card__download-link-text.cta Download License
+
+              .profile-card__last-visit.tech-caps-text Was online 2 hours ago
+            //END   profile-card
+          //END   profile__left
+
+          //BEGIN profile-body
+          .profile-body
+            include ../sections/profile/salary
+            include ../sections/profile/schedule
+
+            //BEGIN profile-body__messages
+            .profile-body__messages
+              h3.h3.messages-title Messages
+              .messages
+                include ../sections/profile/message-top
+            //END   profile-body__messages
+          //END   profile-body
+      //END   profile
+
+    //end content
+    include ../sections/bottom-sections-wrap-no-btn
