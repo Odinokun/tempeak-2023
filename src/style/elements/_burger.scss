@@ -5,6 +5,8 @@ $burger-item: 2px;
 $burger-item-offset: $burger-height - $burger-item * 2;
 $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
 
+//$burger-item-radius:
+
 .burger {
   position: relative;
   display: inline-flex;
